@@ -139,8 +139,13 @@ da implementação.
 
 Perfil `LEITO360_AI`, restrito aos objetos do LEITO360
 (`LEITO360_SIH`, `LEITO360_CNES_JSON`, `LEITO360_POPULACAO_EXT`,
-`VW_LEITO360_ANALITICO`), provider OCI Generative AI. As 5 perguntas de
-negócio exigidas pelo Challenge estão em
+`VW_LEITO360_ANALITICO`). `oracle/sql/07_select_ai_profile.sql` traz duas
+opções de provedor — escolha a que funcionar no seu ambiente:
+
+- **Opção A — OCI Generative AI**: segue literalmente o LiveLabs 4222 (provider `oci`, credencial `OCI$RESOURCE_PRINCIPAL`). Requer OCI Generative AI habilitado na região da sua tenancy.
+- **Opção B — Cohere**: conforme demonstrado em aula (professor Milton Goya, chave de API gratuita em `dashboard.cohere.com`). Não coberto pelo LiveLabs 4222 — confirme com o professor/tutor o nome exato do provider antes de rodar, se tiver dúvida.
+
+As 5 perguntas de negócio exigidas pelo Challenge estão em
 `oracle/sql/08_select_ai_perguntas.sql`, com ações `SHOWSQL` (mostra o SQL
 gerado) e `RUNSQL` (executa e traz o resultado). As evidências reais
 (prompt, SQL gerado, resultado, interpretação, limitações) devem ser
