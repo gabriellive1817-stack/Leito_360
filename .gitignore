@@ -25,6 +25,7 @@ ewallet.p12
 .DS_Store
 Thumbs.db
 *.log
+~$*
 
 # Editor
 .vscode/

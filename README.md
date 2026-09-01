@@ -61,6 +61,7 @@ Competência padrão do dashboard: **04/2026** (mais recente com cobertura das
 | SIH/SUS — Morbidade Hospitalar | internações, permanência média, óbitos, taxa de mortalidade, por UF/competência | `tabnet.datasus.gov.br/cgi/deftohtm.exe?sih/cnv/niuf.def` |
 | CNES — Leitos de Internação | leitos de internação cadastrados destinados ao SUS, por UF/competência | `tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def` |
 | IBGE/SIDRA — População estimada | população estimada 2026 por UF | `apisidra.ibge.gov.br/values/t/6579/n3/all/v/9324/p/last` |
+| IBGE — Malhas Territoriais | malha oficial das 27 UFs usada no mapa do dashboard | `servicodados.ibge.gov.br/api/v3/malhas/paises/BR?intrarregiao=UF&qualidade=minima` |
 
 Os totais de controle originalmente informados foram reconciliados: a
 execução mais recente do ETL bateu exatamente (diferença zero) com todos os
@@ -168,6 +169,7 @@ externas).
 ```bash
 python etl/fetch_raw.py
 python etl/parse_validate_build.py
+python etl/build_malha_uf.py
 ```
 
 O primeiro script busca as três fontes oficiais e grava as respostas
@@ -178,6 +180,11 @@ calcula os indicadores e gera:
 - `data/processed/leito360_consolidado.csv` e `.json` (162 registros)
 - `data/processed/validacao_pipeline.json` (relatório de validação/reconciliação)
 - `oracle/data/sih_internacoes.csv`, `oracle/data/cnes_leitos.json`, `oracle/data/ibge_populacao.csv`
+
+O terceiro script (`build_malha_uf.py`) baixa a malha territorial oficial das
+UFs no IBGE, preserva a resposta original em `data/raw/ibge_malha_uf.geojson`,
+projeta a geometria para o sistema de coordenadas do SVG, simplifica por
+Douglas-Peucker e grava `public/data/uf_malha.json` — o mapa do dashboard.
 - `public/data/leito360.json` (consumido pelo dashboard)
 
 O pipeline termina com código de saída diferente de zero se qualquer
@@ -232,8 +239,9 @@ antes de abrir o dashboard pela primeira vez.
 - Leitos SUS cadastrados não representam vagas livres em tempo real.
 - Dados de competências fechadas, sujeitos a atualização retroativa pelo DATASUS.
 - Sem monitoramento operacional ao vivo nem alertas automáticos.
-- O geocódigo do mapa usa uma geometria estilizada dos estados (herdada do
-  protótipo Figma), não um shapefile oficial do IBGE.
+- O mapa usa a malha oficial do IBGE em qualidade mínima, ainda simplificada
+  por Douglas-Peucker e projetada em equirretangular: serve para leitura
+  comparativa entre UFs, não para medição cartográfica.
 - Select AI depende de acesso a um provedor de LLM (OCI Generative AI,
   OpenAI, Azure ou Google Gemini) configurado na conta Oracle do usuário;
   não há chave/credencial embutida no repositório nem no dashboard.
@@ -253,13 +261,13 @@ antes de abrir o dashboard pela primeira vez.
 LEITO360/
 ├── index.html, src/            — front-end React + TypeScript + Vite
 ├── public/data/                — JSON sanitizado consumido pelo dashboard
-├── etl/                        — pipeline Python (fetch, parse, validação, indicadores)
+├── etl/                        — pipeline Python (fetch, parse, validação, indicadores, malha)
 ├── data/raw/                   — respostas originais das fontes (preservadas)
 ├── data/processed/             — CSV/JSON tratados + relatório de validação
 ├── oracle/data/                — 3 formatos separados (CSV relacional, JSON, CSV externo)
 ├── oracle/sql/                 — DDL, carga, view analítica, Select AI
-├── oracle/evidencias/          — prints da execução Oracle (sem credenciais)
 ├── docs/evidencias/            — evidências documentadas (o quê, prova, fonte, limitação)
+├── docs/evidencias/prints/     — capturas do dashboard publicado (sem credenciais)
 ├── docs/arquitetura/           — diagramas e decisões de arquitetura
 ├── docs/gerenciamento/         — gestão do projeto (Sprint 1 x Sprint 2)
 ├── docs/roteiro_pitch/         — roteiro do vídeo hands-on
