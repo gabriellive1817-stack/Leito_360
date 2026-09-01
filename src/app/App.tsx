@@ -686,7 +686,7 @@ export default function App() {
   const [ufSelecionada, setUfSelecionada] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/data/leito360.json")
+    fetch(`${import.meta.env.BASE_URL}data/leito360.json`)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
