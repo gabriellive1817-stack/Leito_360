@@ -1,0 +1,2432 @@
+[
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "11",
+    "sigla_uf": "RO",
+    "estado": "Rondônia",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 4265,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "12",
+    "sigla_uf": "AC",
+    "estado": "Acre",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1458,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "13",
+    "sigla_uf": "AM",
+    "estado": "Amazonas",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 5490,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "14",
+    "sigla_uf": "RR",
+    "estado": "Roraima",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1332,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "15",
+    "sigla_uf": "PA",
+    "estado": "Pará",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 11466,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "16",
+    "sigla_uf": "AP",
+    "estado": "Amapá",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1387,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "17",
+    "sigla_uf": "TO",
+    "estado": "Tocantins",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 2742,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "21",
+    "sigla_uf": "MA",
+    "estado": "Maranhão",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 13194,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "22",
+    "sigla_uf": "PI",
+    "estado": "Piauí",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 6134,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "23",
+    "sigla_uf": "CE",
+    "estado": "Ceará",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 16178,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "24",
+    "sigla_uf": "RN",
+    "estado": "Rio Grande do Norte",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 6209,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "25",
+    "sigla_uf": "PB",
+    "estado": "Paraíba",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 7496,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "26",
+    "sigla_uf": "PE",
+    "estado": "Pernambuco",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 16092,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "27",
+    "sigla_uf": "AL",
+    "estado": "Alagoas",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 5385,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "28",
+    "sigla_uf": "SE",
+    "estado": "Sergipe",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 2729,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "29",
+    "sigla_uf": "BA",
+    "estado": "Bahia",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 24844,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "31",
+    "sigla_uf": "MG",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 29380,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "32",
+    "sigla_uf": "ES",
+    "estado": "Espírito Santo",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 5952,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "33",
+    "sigla_uf": "RJ",
+    "estado": "Rio de Janeiro",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 20976,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "35",
+    "sigla_uf": "SP",
+    "estado": "São Paulo",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 54619,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "41",
+    "sigla_uf": "PR",
+    "estado": "Paraná",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 19333,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "42",
+    "sigla_uf": "SC",
+    "estado": "Santa Catarina",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 11787,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "43",
+    "sigla_uf": "RS",
+    "estado": "Rio Grande do Sul",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 20285,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "50",
+    "sigla_uf": "MS",
+    "estado": "Mato Grosso do Sul",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 4034,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "51",
+    "sigla_uf": "MT",
+    "estado": "Mato Grosso",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 6032,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "52",
+    "sigla_uf": "GO",
+    "estado": "Goiás",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 12054,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-11",
+    "codigo_uf": "53",
+    "sigla_uf": "DF",
+    "estado": "Distrito Federal",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 4880,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "11",
+    "sigla_uf": "RO",
+    "estado": "Rondônia",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 4301,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "12",
+    "sigla_uf": "AC",
+    "estado": "Acre",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1458,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "13",
+    "sigla_uf": "AM",
+    "estado": "Amazonas",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 5497,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "14",
+    "sigla_uf": "RR",
+    "estado": "Roraima",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1332,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "15",
+    "sigla_uf": "PA",
+    "estado": "Pará",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 11491,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "16",
+    "sigla_uf": "AP",
+    "estado": "Amapá",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1387,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "17",
+    "sigla_uf": "TO",
+    "estado": "Tocantins",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 2730,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "21",
+    "sigla_uf": "MA",
+    "estado": "Maranhão",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 13354,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "22",
+    "sigla_uf": "PI",
+    "estado": "Piauí",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 6162,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "23",
+    "sigla_uf": "CE",
+    "estado": "Ceará",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 16141,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "24",
+    "sigla_uf": "RN",
+    "estado": "Rio Grande do Norte",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 6223,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "25",
+    "sigla_uf": "PB",
+    "estado": "Paraíba",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 7540,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "26",
+    "sigla_uf": "PE",
+    "estado": "Pernambuco",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 16084,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "27",
+    "sigla_uf": "AL",
+    "estado": "Alagoas",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 5519,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "28",
+    "sigla_uf": "SE",
+    "estado": "Sergipe",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 2735,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "29",
+    "sigla_uf": "BA",
+    "estado": "Bahia",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 24832,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "31",
+    "sigla_uf": "MG",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 29348,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "32",
+    "sigla_uf": "ES",
+    "estado": "Espírito Santo",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 6039,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "33",
+    "sigla_uf": "RJ",
+    "estado": "Rio de Janeiro",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 21051,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "35",
+    "sigla_uf": "SP",
+    "estado": "São Paulo",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 54645,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "41",
+    "sigla_uf": "PR",
+    "estado": "Paraná",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 19403,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "42",
+    "sigla_uf": "SC",
+    "estado": "Santa Catarina",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 11822,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "43",
+    "sigla_uf": "RS",
+    "estado": "Rio Grande do Sul",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 20350,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "50",
+    "sigla_uf": "MS",
+    "estado": "Mato Grosso do Sul",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 4033,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "51",
+    "sigla_uf": "MT",
+    "estado": "Mato Grosso",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 6089,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "52",
+    "sigla_uf": "GO",
+    "estado": "Goiás",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 12050,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2025-12",
+    "codigo_uf": "53",
+    "sigla_uf": "DF",
+    "estado": "Distrito Federal",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 4913,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "11",
+    "sigla_uf": "RO",
+    "estado": "Rondônia",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 4301,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "12",
+    "sigla_uf": "AC",
+    "estado": "Acre",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1462,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "13",
+    "sigla_uf": "AM",
+    "estado": "Amazonas",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 5466,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "14",
+    "sigla_uf": "RR",
+    "estado": "Roraima",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1332,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "15",
+    "sigla_uf": "PA",
+    "estado": "Pará",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 11411,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "16",
+    "sigla_uf": "AP",
+    "estado": "Amapá",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1389,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "17",
+    "sigla_uf": "TO",
+    "estado": "Tocantins",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 2777,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "21",
+    "sigla_uf": "MA",
+    "estado": "Maranhão",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 13347,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "22",
+    "sigla_uf": "PI",
+    "estado": "Piauí",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 6124,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "23",
+    "sigla_uf": "CE",
+    "estado": "Ceará",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 15964,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "24",
+    "sigla_uf": "RN",
+    "estado": "Rio Grande do Norte",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 6215,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "25",
+    "sigla_uf": "PB",
+    "estado": "Paraíba",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 7554,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "26",
+    "sigla_uf": "PE",
+    "estado": "Pernambuco",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 16169,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "27",
+    "sigla_uf": "AL",
+    "estado": "Alagoas",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 5528,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "28",
+    "sigla_uf": "SE",
+    "estado": "Sergipe",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 2732,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "29",
+    "sigla_uf": "BA",
+    "estado": "Bahia",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 24857,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "31",
+    "sigla_uf": "MG",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 29233,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "32",
+    "sigla_uf": "ES",
+    "estado": "Espírito Santo",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 6061,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "33",
+    "sigla_uf": "RJ",
+    "estado": "Rio de Janeiro",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 21035,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "35",
+    "sigla_uf": "SP",
+    "estado": "São Paulo",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 54770,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "41",
+    "sigla_uf": "PR",
+    "estado": "Paraná",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 19404,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "42",
+    "sigla_uf": "SC",
+    "estado": "Santa Catarina",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 11761,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "43",
+    "sigla_uf": "RS",
+    "estado": "Rio Grande do Sul",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 20346,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "50",
+    "sigla_uf": "MS",
+    "estado": "Mato Grosso do Sul",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 4040,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "51",
+    "sigla_uf": "MT",
+    "estado": "Mato Grosso",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 6108,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "52",
+    "sigla_uf": "GO",
+    "estado": "Goiás",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 11996,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-01",
+    "codigo_uf": "53",
+    "sigla_uf": "DF",
+    "estado": "Distrito Federal",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 4957,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "11",
+    "sigla_uf": "RO",
+    "estado": "Rondônia",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 4304,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "12",
+    "sigla_uf": "AC",
+    "estado": "Acre",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1470,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "13",
+    "sigla_uf": "AM",
+    "estado": "Amazonas",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 5470,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "14",
+    "sigla_uf": "RR",
+    "estado": "Roraima",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1332,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "15",
+    "sigla_uf": "PA",
+    "estado": "Pará",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 11517,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "16",
+    "sigla_uf": "AP",
+    "estado": "Amapá",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1391,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "17",
+    "sigla_uf": "TO",
+    "estado": "Tocantins",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 2777,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "21",
+    "sigla_uf": "MA",
+    "estado": "Maranhão",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 13339,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "22",
+    "sigla_uf": "PI",
+    "estado": "Piauí",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 6129,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "23",
+    "sigla_uf": "CE",
+    "estado": "Ceará",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 15944,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "24",
+    "sigla_uf": "RN",
+    "estado": "Rio Grande do Norte",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 6226,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "25",
+    "sigla_uf": "PB",
+    "estado": "Paraíba",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 7558,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "26",
+    "sigla_uf": "PE",
+    "estado": "Pernambuco",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 16096,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "27",
+    "sigla_uf": "AL",
+    "estado": "Alagoas",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 5558,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "28",
+    "sigla_uf": "SE",
+    "estado": "Sergipe",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 2731,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "29",
+    "sigla_uf": "BA",
+    "estado": "Bahia",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 24712,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "31",
+    "sigla_uf": "MG",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 29339,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "32",
+    "sigla_uf": "ES",
+    "estado": "Espírito Santo",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 5970,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "33",
+    "sigla_uf": "RJ",
+    "estado": "Rio de Janeiro",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 21025,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "35",
+    "sigla_uf": "SP",
+    "estado": "São Paulo",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 54700,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "41",
+    "sigla_uf": "PR",
+    "estado": "Paraná",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 19414,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "42",
+    "sigla_uf": "SC",
+    "estado": "Santa Catarina",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 11787,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "43",
+    "sigla_uf": "RS",
+    "estado": "Rio Grande do Sul",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 20345,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "50",
+    "sigla_uf": "MS",
+    "estado": "Mato Grosso do Sul",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 4042,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "51",
+    "sigla_uf": "MT",
+    "estado": "Mato Grosso",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 6118,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "52",
+    "sigla_uf": "GO",
+    "estado": "Goiás",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 11969,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-02",
+    "codigo_uf": "53",
+    "sigla_uf": "DF",
+    "estado": "Distrito Federal",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 4964,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "11",
+    "sigla_uf": "RO",
+    "estado": "Rondônia",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 4203,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "12",
+    "sigla_uf": "AC",
+    "estado": "Acre",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1470,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "13",
+    "sigla_uf": "AM",
+    "estado": "Amazonas",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 5509,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "14",
+    "sigla_uf": "RR",
+    "estado": "Roraima",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1348,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "15",
+    "sigla_uf": "PA",
+    "estado": "Pará",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 11571,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "16",
+    "sigla_uf": "AP",
+    "estado": "Amapá",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1440,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "17",
+    "sigla_uf": "TO",
+    "estado": "Tocantins",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 2870,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "21",
+    "sigla_uf": "MA",
+    "estado": "Maranhão",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 13300,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "22",
+    "sigla_uf": "PI",
+    "estado": "Piauí",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 6129,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "23",
+    "sigla_uf": "CE",
+    "estado": "Ceará",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 15938,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "24",
+    "sigla_uf": "RN",
+    "estado": "Rio Grande do Norte",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 6284,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "25",
+    "sigla_uf": "PB",
+    "estado": "Paraíba",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 7566,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "26",
+    "sigla_uf": "PE",
+    "estado": "Pernambuco",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 16021,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "27",
+    "sigla_uf": "AL",
+    "estado": "Alagoas",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 5406,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "28",
+    "sigla_uf": "SE",
+    "estado": "Sergipe",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 2756,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "29",
+    "sigla_uf": "BA",
+    "estado": "Bahia",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 24916,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "31",
+    "sigla_uf": "MG",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 29389,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "32",
+    "sigla_uf": "ES",
+    "estado": "Espírito Santo",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 5987,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "33",
+    "sigla_uf": "RJ",
+    "estado": "Rio de Janeiro",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 21105,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "35",
+    "sigla_uf": "SP",
+    "estado": "São Paulo",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 54688,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "41",
+    "sigla_uf": "PR",
+    "estado": "Paraná",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 19421,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "42",
+    "sigla_uf": "SC",
+    "estado": "Santa Catarina",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 11770,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "43",
+    "sigla_uf": "RS",
+    "estado": "Rio Grande do Sul",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 20252,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "50",
+    "sigla_uf": "MS",
+    "estado": "Mato Grosso do Sul",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 4039,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "51",
+    "sigla_uf": "MT",
+    "estado": "Mato Grosso",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 6158,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "52",
+    "sigla_uf": "GO",
+    "estado": "Goiás",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 11904,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-03",
+    "codigo_uf": "53",
+    "sigla_uf": "DF",
+    "estado": "Distrito Federal",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 5014,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "11",
+    "sigla_uf": "RO",
+    "estado": "Rondônia",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 4167,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "12",
+    "sigla_uf": "AC",
+    "estado": "Acre",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1422,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "13",
+    "sigla_uf": "AM",
+    "estado": "Amazonas",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 5503,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "14",
+    "sigla_uf": "RR",
+    "estado": "Roraima",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1348,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "15",
+    "sigla_uf": "PA",
+    "estado": "Pará",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 11614,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "16",
+    "sigla_uf": "AP",
+    "estado": "Amapá",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 1422,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "17",
+    "sigla_uf": "TO",
+    "estado": "Tocantins",
+    "regiao": "Norte",
+    "leitos_sus_cadastrados": 2870,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "21",
+    "sigla_uf": "MA",
+    "estado": "Maranhão",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 13301,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "22",
+    "sigla_uf": "PI",
+    "estado": "Piauí",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 6152,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "23",
+    "sigla_uf": "CE",
+    "estado": "Ceará",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 15969,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "24",
+    "sigla_uf": "RN",
+    "estado": "Rio Grande do Norte",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 6220,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "25",
+    "sigla_uf": "PB",
+    "estado": "Paraíba",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 7543,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "26",
+    "sigla_uf": "PE",
+    "estado": "Pernambuco",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 16025,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "27",
+    "sigla_uf": "AL",
+    "estado": "Alagoas",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 5406,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "28",
+    "sigla_uf": "SE",
+    "estado": "Sergipe",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 2760,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "29",
+    "sigla_uf": "BA",
+    "estado": "Bahia",
+    "regiao": "Nordeste",
+    "leitos_sus_cadastrados": 25005,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "31",
+    "sigla_uf": "MG",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 29778,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "32",
+    "sigla_uf": "ES",
+    "estado": "Espírito Santo",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 5971,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "33",
+    "sigla_uf": "RJ",
+    "estado": "Rio de Janeiro",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 21061,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "35",
+    "sigla_uf": "SP",
+    "estado": "São Paulo",
+    "regiao": "Sudeste",
+    "leitos_sus_cadastrados": 54722,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "41",
+    "sigla_uf": "PR",
+    "estado": "Paraná",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 19319,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "42",
+    "sigla_uf": "SC",
+    "estado": "Santa Catarina",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 11778,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "43",
+    "sigla_uf": "RS",
+    "estado": "Rio Grande do Sul",
+    "regiao": "Sul",
+    "leitos_sus_cadastrados": 20100,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "50",
+    "sigla_uf": "MS",
+    "estado": "Mato Grosso do Sul",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 4058,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "51",
+    "sigla_uf": "MT",
+    "estado": "Mato Grosso",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 6099,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "52",
+    "sigla_uf": "GO",
+    "estado": "Goiás",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 11622,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  },
+  {
+    "competencia": "2026-04",
+    "codigo_uf": "53",
+    "sigla_uf": "DF",
+    "estado": "Distrito Federal",
+    "regiao": "Centro-Oeste",
+    "leitos_sus_cadastrados": 5000,
+    "metadados_fonte": {
+      "sistema": "CNES",
+      "consulta": "cnes/cnv/leiintbr.def",
+      "indicador": "Quantidade_SUS",
+      "definicao": "Leitos de internação cadastrados e destinados ao SUS (nao representa vagas livres em tempo real)",
+      "url_fonte": "http://tabnet.datasus.gov.br/cgi/deftohtm.exe?cnes/cnv/leiintbr.def"
+    }
+  }
+]

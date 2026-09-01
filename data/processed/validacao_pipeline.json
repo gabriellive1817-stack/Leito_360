@@ -1,0 +1,66 @@
+{
+  "status": "OK",
+  "registros_consolidados": 162,
+  "esperado": 162,
+  "ufs_por_competencia": 27,
+  "competencias": 6,
+  "avisos": [],
+  "reconciliacao_tabnet": [
+    {
+      "competencia": "2025-11",
+      "internacoes_tabnet_execucao": 1193539,
+      "internacoes_total_controle_original": 1193539,
+      "internacoes_diferenca": 0,
+      "leitos_tabnet_execucao": 315733,
+      "leitos_total_controle_original": 315733,
+      "leitos_diferenca": 0
+    },
+    {
+      "competencia": "2025-12",
+      "internacoes_tabnet_execucao": 1162871,
+      "internacoes_total_controle_original": 1162871,
+      "internacoes_diferenca": 0,
+      "leitos_tabnet_execucao": 316529,
+      "leitos_total_controle_original": 316529,
+      "leitos_diferenca": 0
+    },
+    {
+      "competencia": "2026-01",
+      "internacoes_tabnet_execucao": 1178308,
+      "internacoes_total_controle_original": 1178308,
+      "internacoes_diferenca": 0,
+      "leitos_tabnet_execucao": 316339,
+      "leitos_total_controle_original": 316339,
+      "leitos_diferenca": 0
+    },
+    {
+      "competencia": "2026-02",
+      "internacoes_tabnet_execucao": 1143546,
+      "internacoes_total_controle_original": 1143546,
+      "internacoes_diferenca": 0,
+      "leitos_tabnet_execucao": 316227,
+      "leitos_total_controle_original": 316227,
+      "leitos_diferenca": 0
+    },
+    {
+      "competencia": "2026-03",
+      "internacoes_tabnet_execucao": 1256010,
+      "internacoes_total_controle_original": 1256010,
+      "internacoes_diferenca": 0,
+      "leitos_tabnet_execucao": 316454,
+      "leitos_total_controle_original": 316454,
+      "leitos_diferenca": 0
+    },
+    {
+      "competencia": "2026-04",
+      "internacoes_tabnet_execucao": 1218903,
+      "internacoes_total_controle_original": 1218903,
+      "internacoes_diferenca": 0,
+      "leitos_tabnet_execucao": 316235,
+      "leitos_total_controle_original": 316235,
+      "leitos_diferenca": 0
+    }
+  ],
+  "populacao_brasil_2026_execucao": 214211951,
+  "populacao_brasil_2026_controle_original": 214211951
+}
