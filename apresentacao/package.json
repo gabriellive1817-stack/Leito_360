@@ -1,0 +1,13 @@
+{
+  "name": "leito360-apresentacao",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gerador do PPTX de evidências de construção da Sprint 2 do LEITO360",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node build_pptx.js"
+  },
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}

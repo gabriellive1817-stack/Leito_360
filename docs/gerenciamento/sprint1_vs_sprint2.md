@@ -1,30 +1,49 @@
 # Planejado na Sprint 1 x Entregue na Sprint 2
 
-> **Pendência:** a apresentação da Sprint 1 não foi anexada a esta sessão de
-> trabalho. Esta tabela foi montada a partir do protótipo Figma entregue
-> (única evidência disponível da Sprint 1) e precisa ser revisada/completada
-> pelo grupo com o conteúdo real da apresentação da Sprint 1 antes de ir para
-> o PPT final.
+Comparativo entre o que a Sprint 1 propôs (protótipo Figma + apresentação) e o
+que foi efetivamente implementado nesta Sprint 2.
 
-| Item | Sprint 1 (protótipo Figma) | Sprint 2 (este repositório) | Status |
+| Item | Sprint 1 (protótipo) | Sprint 2 (este repositório) | Status |
 |---|---|---|---|
-| Dados | Números fixos no código (ocupação, ranking, internações) | Pipeline real (SIH/SUS, CNES, IBGE), 162 registros reconciliados | Implementado |
-| Fontes | Citadas como texto ("DATASUS/SIH-SUS", "CNES") sem integração | Fontes reais consultadas via TabNet/API, brutos preservados em `data/raw/` | Implementado |
-| Oracle | Mencionado na UI ("Oracle 23ai") sem execução real | Tabela relacional, JSON nativo, external table, view analítica — scripts prontos em `oracle/sql/` | Implementado (execução real depende do usuário rodar no ambiente acadêmico — ver `docs/evidencias/`) |
-| Select AI | SQL "gerado pelo Select AI" era texto estático no componente `SQLHighlight` | Perfil real `LEITO360_AI` seguindo o LiveLabs 4222, perguntas reais via `SHOWSQL`/`RUNSQL` | Parcialmente implementado — scripts prontos, execução e evidências pendentes de rodar no Oracle acadêmico |
-| Dashboard — Visão Executiva | 2 telas mockadas, sem filtros funcionais | Filtro por competência/região, seleção de UF, mapa por pressão assistencial real, ranking real, tendência 6 meses real | Implementado |
-| Dashboard — Consulta | "Consulta em Linguagem Natural" simulando resposta em 0,8s | "Explorador Analítico" com filtros guiados reais + exportação CSV; Select AI de verdade fica no Database Actions | Implementado |
-| "Ao vivo" / ocupação em tempo real | Badge "Ao vivo" e % de ocupação fictícios | Removidos; indicador renomeado para "pressão assistencial comparativa" (dados de competência fechada) | Corrigido |
-| Publicação | Não publicado | Pendente — depende de ação do usuário (GitHub público, GitHub Pages) | Planejado |
-| Vídeo pitch | Não existia | Roteiro pronto em `docs/roteiro_pitch/`; gravação pendente de todos os componentes estarem publicados | Planejado |
+| Dados | Números fixos no código (ocupação, ranking, internações) | Pipeline real (SIH/SUS, CNES, IBGE), 162 registros reconciliados com os totais de controle do TabNet | Implementado |
+| Fontes | Citadas como texto ("DATASUS/SIH-SUS", "CNES") sem integração | Consultadas por HTTP real via TabNet e API do IBGE, respostas originais preservadas em `data/raw/` | Implementado |
+| Oracle | Mencionado na UI ("Oracle 23ai") sem execução real | Tabela relacional, JSON nativo, external table e view analítica **carregados e conferidos** no Oracle (LiveLabs sandbox #229599, 31/08–01/09/2026) | Implementado |
+| Select AI | SQL "gerado pelo Select AI" era texto estático no componente `SQLHighlight` | Perfil `LEITO360_AI` criado com sucesso e 5 perguntas de negócio prontas; `DBMS_CLOUD_AI.GENERATE` bloqueado por indisponibilidade do OCI Generative AI naquele sandbox | Parcial — diagnóstico em `docs/evidencias/select_ai_perguntas.md` |
+| Dashboard — Visão Executiva | 2 telas mockadas, sem filtros funcionais | Filtro por competência e região, mapa com a **malha oficial do IBGE** colorido por tercil, ranking, série de 6 competências; clicar numa UF recorta a tela inteira | Implementado |
+| Dashboard — Consulta | "Consulta em Linguagem Natural" simulando resposta em 0,8s | "Explorador Analítico" com 4 consultas guiadas, SQL equivalente identificado como não gerado por IA, qualidade/cobertura do pipeline e exportação CSV | Implementado |
+| "Ao vivo" / ocupação em tempo real | Badge "Ao vivo" e % de ocupação fictícios | Removidos; indicador renomeado para "pressão assistencial comparativa" (competência fechada), com a limitação declarada na própria tela | Corrigido |
+| Publicação | Não publicado | Repositório público no GitHub e dashboard no ar via GitHub Pages | Implementado |
+| Vídeo pitch | Não existia | Roteiro de gravação e texto falado prontos em `docs/roteiro_pitch/`; gravação pendente | Planejado |
 
-## Gerenciamento do trabalho nesta sessão
+## Evidências de cada linha
 
-- Escopo revisado com o representante do grupo antes de iniciar (materiais
-  faltantes identificados, decisão sobre LiveLabs 4222 registrada, política
-  de credenciais confirmada).
-- ETL: implementado, executado e validado (evidência: `data/processed/validacao_pipeline.json`).
-- Scripts Oracle: implementados; execução real requer o ambiente acadêmico
-  do usuário (ver `README.md`, seção "Como executar as cargas Oracle").
-- Dashboard: reescrito para consumir dados reais; teste visual em navegador
-  pendente porque esta máquina não tem Node.js instalado (ver `README.md`).
+| Afirmação | Onde conferir |
+|---|---|
+| 162 registros, 0 duplicatas, 0 nulos, reconciliação com o TabNet | `data/processed/validacao_pipeline.json` |
+| Execução real no Oracle | `docs/evidencias/` e slide 14 da apresentação |
+| Bloqueio do Select AI | `docs/evidencias/select_ai_perguntas.md` e slide 15 |
+| Dashboard sem mocks | `docs/evidencias/prints/` (capturas da aplicação publicada) |
+| Malha oficial do IBGE | `etl/build_malha_uf.py` e `data/raw/ibge_malha_uf.geojson` |
+
+## Gerenciamento do trabalho
+
+- Escopo revisado com o representante do grupo antes de iniciar: materiais
+  faltantes identificados, decisão sobre o uso do LiveLabs 4222 registrada em
+  `docs/arquitetura/decisao_livelabs_4222.md`, política de credenciais
+  confirmada (nada de segredo versionado).
+- ETL implementado, executado e validado — a validação é automática e o
+  pipeline sai com código diferente de zero se a qualidade falhar.
+- Scripts Oracle implementados e executados; as evidências da rodada real
+  estão registradas com o número do sandbox e a data.
+- Dashboard reescrito para consumir dados reais, testado no navegador e
+  publicado; as capturas versionadas em `docs/evidencias/prints/` são as
+  mesmas que aparecem nos slides 7 e 8.
+- Apresentação gerada por script (`apresentacao/build_pptx.js`), não editada
+  à mão, para continuar reprodutível junto com o restante do projeto.
+
+## O que ficou de fora desta sprint
+
+- Gravação e publicação do vídeo pitch.
+- Reexecução do Select AI em ambiente com o serviço de inferência saudável,
+  para preencher as evidências das 5 perguntas.
+- Automatização da carga do Oracle por job agendado.

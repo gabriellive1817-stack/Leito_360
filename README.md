@@ -205,7 +205,7 @@ campo crítico, ou divergência entre a soma por UF e o total do TabNet).
 4. Rode `07_select_ai_profile.sql` (ajuste `<SCHEMA_LEITO360>` e a região) e
    depois `08_select_ai_perguntas.sql`.
 5. Preencha `docs/evidencias/select_ai_perguntas.md` com os resultados reais
-   e capture prints (sem expor usuário/senha) em `oracle/evidencias/`.
+   e guarde as capturas (sem expor usuário/senha) em `docs/evidencias/prints/`.
 
 **Nenhuma credencial, senha, wallet ou string de conexão deve ser commitada
 neste repositório.** Os scripts usam placeholders (`<CREDENTIAL_NAME>`,
@@ -221,6 +221,26 @@ pnpm dev   # ou npm run dev
 
 O dashboard lê `public/data/leito360.json` (gerado pelo ETL) — rode o ETL
 antes de abrir o dashboard pela primeira vez.
+
+## Dashboard — o que cada tela mostra
+
+**Visão Executiva.** Quatro indicadores do recorte selecionado (internações
+do período, média por dia, permanência média ponderada e leitos SUS
+cadastrados), o mapa das 27 UFs colorido pelo tercil de pressão assistencial
+da competência, o ranking das cinco UFs sob maior pressão e a série das seis
+competências.
+
+**Explorador Analítico.** Quatro consultas guiadas — maior pressão
+assistencial, menor oferta de leitos, maior permanência média e maior taxa de
+mortalidade — com o resultado em tabela, o SQL equivalente (identificado como
+**não** gerado por IA), o painel de qualidade e cobertura do pipeline, as
+fontes oficiais e as limitações metodológicas. O botão de exportação gera o
+CSV do recorte atual.
+
+**O recorte é único e vale para as duas telas.** Competência e região vêm da
+barra superior; clicar numa UF (no mapa ou no ranking) recorta tudo — títulos,
+indicadores, ranking, série, tabela e o `WHERE` do SQL equivalente passam a
+responder só por aquela UF. "Limpar recorte" volta ao Brasil.
 
 ## Como publicar
 
@@ -270,6 +290,7 @@ LEITO360/
 ├── docs/evidencias/prints/     — capturas do dashboard publicado (sem credenciais)
 ├── docs/arquitetura/           — diagramas e decisões de arquitetura
 ├── docs/gerenciamento/         — gestão do projeto (Sprint 1 x Sprint 2)
-├── docs/roteiro_pitch/         — roteiro do vídeo hands-on
+├── docs/roteiro_pitch/         — roteiro de gravação + texto falado do pitch
+├── apresentacao/               — gerador do PPTX de evidências (pptxgenjs)
 └── README.md
 ```
