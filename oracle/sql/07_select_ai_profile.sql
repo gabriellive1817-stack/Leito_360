@@ -1,8 +1,15 @@
 -- =============================================================================
 -- LEITO360 — Perfil do Select AI
 --
--- Duas opções abaixo, dependendo de qual provedor de IA está disponível no
--- seu ambiente. Rode APENAS UMA das duas (comente/apague a outra).
+-- Três opções abaixo, dependendo de qual provedor de IA está disponível no
+-- seu ambiente. Rode APENAS UMA (comente/apague as outras).
+--
+-- RESULTADO REAL (LiveLabs sandbox #229599, 31/08-01/09/2026): a OPÇÃO C foi
+-- a única que criou o profile sem erro (a Opção A deu ORA-20404 nesse
+-- sandbox — ver docs/evidencias/select_ai_perguntas.md para o diagnóstico
+-- completo). Ainda assim, as chamadas de DBMS_CLOUD_AI.GENERATE ficaram
+-- pendentes e falharam por timeout — indisponibilidade do serviço OCI
+-- Generative AI nesse ambiente específico, não um erro deste script.
 -- =============================================================================
 
 
@@ -87,9 +94,43 @@ BEGIN
 END;
 /
 
--- Em ambas as opções: substitua <SCHEMA_LEITO360> pelo nome do schema/usuário
--- onde os objetos foram criados (ex.: ADMIN). Nunca commitar a chave de API
--- real do Cohere no repositório — ela fica só na credencial dentro do banco.
+-- =============================================================================
+-- OPÇÃO C — Credencial nativa do LiveLabs (AI_CREDENTIAL)
+-- Padrão que REALMENTE funcionou (criação do profile sem erro) na sessão de
+-- 31/08-01/09/2026, no sandbox #229599. É a credencial que a própria Task 2
+-- do Lab 1 do LiveLabs 4222 pede para localizar com
+-- "SELECT credential_name, username FROM user_credentials" antes de montar
+-- o profile — não é OCI$RESOURCE_PRINCIPAL nem uma credencial nova.
+-- Use esta opção se, ao consultar user_credentials no seu ambiente, já
+-- existir uma linha chamada AI_CREDENTIAL (ou nome equivalente).
+-- =============================================================================
+
+-- Passo 0 — confirme que a credencial existe no seu ambiente:
+-- SELECT credential_name, username, comments FROM user_credentials;
+
+BEGIN
+    DBMS_CLOUD_AI.DROP_PROFILE(profile_name => 'LEITO360_AI', force => TRUE);
+
+    DBMS_CLOUD_AI.CREATE_PROFILE(
+        profile_name => 'LEITO360_AI',
+        attributes   =>
+            '{"provider": "oci",
+              "credential_name": "AI_CREDENTIAL",
+              "comments": "true",
+              "object_list": [
+                  {"owner": "<SCHEMA_LEITO360>", "name": "LEITO360_SIH"},
+                  {"owner": "<SCHEMA_LEITO360>", "name": "LEITO360_CNES_JSON"},
+                  {"owner": "<SCHEMA_LEITO360>", "name": "LEITO360_POPULACAO"},
+                  {"owner": "<SCHEMA_LEITO360>", "name": "VW_LEITO360_ANALITICO"}
+              ]
+             }'
+    );
+END;
+/
+
+-- Em todas as opções: substitua <SCHEMA_LEITO360> pelo nome do schema/usuário
+-- onde os objetos foram criados (ex.: ADMIN, ou MOVIESTREAM no ambiente do
+-- workshop). Nunca commitar chaves de API reais no repositório.
 
 -- Teste básico do profile (idêntico ao Task 3 do LiveLabs 4222):
 SELECT DBMS_CLOUD_AI.GENERATE(

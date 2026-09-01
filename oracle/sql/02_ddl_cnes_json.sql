@@ -5,19 +5,22 @@
 --
 -- Usa o tipo JSON nativo do Oracle Autonomous AI Database 23ai (binário,
 -- OSON). Cada linha guarda o documento inteiro tal como exportado pelo ETL
--- em oracle/data/cnes_leitos.json; colunas virtuais extraem os campos usados
--- em joins/filtros para permitir index e constraints sem duplicar o dado.
+-- em oracle/data/cnes_leitos.json.
+--
+-- NOTA (execução real, LiveLabs sandbox #229599, 31/08-01/09/2026): a versão
+-- original deste script usava colunas virtuais com a sintaxe de ponto
+-- (doc.competencia.string()), que resultou em ORA-01747 "especificação de
+-- coluna inválida" nesse ambiente. A versão abaixo (testada e confirmada
+-- com 162 linhas carregadas) usa apenas a coluna JSON pura; a extração dos
+-- campos para join é feita via JSON_VALUE diretamente na view analítica
+-- (05_view_analitica.sql), que é a abordagem mais portável entre versões.
 -- =============================================================================
 
 DROP TABLE LEITO360_CNES_JSON CASCADE CONSTRAINTS PURGE;
 
 CREATE TABLE LEITO360_CNES_JSON (
-    id              NUMBER          GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    doc             JSON            NOT NULL,
-    competencia     VARCHAR2(7)     GENERATED ALWAYS AS (doc.competencia.string()) VIRTUAL,
-    codigo_uf       VARCHAR2(2)     GENERATED ALWAYS AS (doc.codigo_uf.string()) VIRTUAL,
-    leitos_sus      NUMBER          GENERATED ALWAYS AS (doc.leitos_sus_cadastrados.number()) VIRTUAL,
-    CONSTRAINT uq_leito360_cnes_json UNIQUE (competencia, codigo_uf)
+    id   NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    doc  JSON NOT NULL
 );
 
 COMMENT ON TABLE LEITO360_CNES_JSON IS
@@ -25,14 +28,12 @@ COMMENT ON TABLE LEITO360_CNES_JSON IS
     'competência, armazenados como documento JSON nativo (fonte: CNES via '
     'DATASUS TabNet, cnes/cnv/leiintbr.def). Leitos cadastrados != vagas livres.';
 COMMENT ON COLUMN LEITO360_CNES_JSON.doc IS
-    'Documento JSON completo: {competencia, codigo_uf, sigla_uf, estado, regiao, '
-    'leitos_sus_cadastrados, metadados_fonte:{sistema, consulta, indicador, definicao, url_fonte}}.';
-COMMENT ON COLUMN LEITO360_CNES_JSON.competencia IS
-    'Coluna virtual extraída de doc.competencia — usada em joins com LEITO360_SIH.';
-COMMENT ON COLUMN LEITO360_CNES_JSON.codigo_uf IS
-    'Coluna virtual extraída de doc.codigo_uf — código IBGE da UF (2 dígitos).';
-COMMENT ON COLUMN LEITO360_CNES_JSON.leitos_sus IS
-    'Coluna virtual extraída de doc.leitos_sus_cadastrados — quantidade de leitos SUS.';
+    'Documento JSON completo: {competencia, codigo_uf, sigla_uf, estado, regiao, leitos_sus_cadastrados}.';
 
--- Índice de apoio ao join com a view analítica e às consultas do Select AI.
-CREATE INDEX ix_leito360_cnes_json_comp_uf ON LEITO360_CNES_JSON (competencia, codigo_uf);
+-- Índice funcional de apoio ao join com a view analítica (opcional, mas
+-- recomendado se o volume de documentos crescer).
+CREATE INDEX ix_leito360_cnes_json_comp_uf
+    ON LEITO360_CNES_JSON (JSON_VALUE(doc, '$.competencia'), JSON_VALUE(doc, '$.codigo_uf'));
+
+-- Validação (após carga):
+-- SELECT COUNT(*) FROM LEITO360_CNES_JSON WHERE doc IS JSON;  -- esperado: 162

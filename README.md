@@ -138,20 +138,27 @@ da implementação.
 ## Select AI
 
 Perfil `LEITO360_AI`, restrito aos objetos do LEITO360
-(`LEITO360_SIH`, `LEITO360_CNES_JSON`, `LEITO360_POPULACAO_EXT`,
-`VW_LEITO360_ANALITICO`). `oracle/sql/07_select_ai_profile.sql` traz duas
+(`LEITO360_SIH`, `LEITO360_CNES_JSON`, `LEITO360_POPULACAO`,
+`VW_LEITO360_ANALITICO`). `oracle/sql/07_select_ai_profile.sql` traz três
 opções de provedor — escolha a que funcionar no seu ambiente:
 
-- **Opção A — OCI Generative AI**: segue literalmente o LiveLabs 4222 (provider `oci`, credencial `OCI$RESOURCE_PRINCIPAL`). Requer OCI Generative AI habilitado na região da sua tenancy.
-- **Opção B — Cohere**: conforme demonstrado em aula (professor Milton Goya, chave de API gratuita em `dashboard.cohere.com`). Não coberto pelo LiveLabs 4222 — confirme com o professor/tutor o nome exato do provider antes de rodar, se tiver dúvida.
+- **Opção A — OCI Generative AI (`OCI$RESOURCE_PRINCIPAL`)**: segue literalmente o LiveLabs 4222. Requer OCI Generative AI habilitado na região da sua tenancy.
+- **Opção B — Cohere**: conforme demonstrado em aula (professor Milton Goya, chave de API gratuita em `dashboard.cohere.com`). Não coberto pelo LiveLabs 4222.
+- **Opção C — credencial nativa `AI_CREDENTIAL`**: a credencial que o próprio LiveLabs 4222 (Task 2 do Lab 1) provisiona automaticamente em ambientes de sandbox — encontre com `SELECT credential_name FROM user_credentials`.
 
-As 5 perguntas de negócio exigidas pelo Challenge estão em
-`oracle/sql/08_select_ai_perguntas.sql`, com ações `SHOWSQL` (mostra o SQL
-gerado) e `RUNSQL` (executa e traz o resultado). As evidências reais
-(prompt, SQL gerado, resultado, interpretação, limitações) devem ser
-preenchidas em `docs/evidencias/select_ai_perguntas.md` **após execução
-real** no ambiente Oracle acadêmico — ver seção "Como executar as cargas
-Oracle" abaixo.
+### Status real da execução (LiveLabs sandbox #229599, 31/08–01/09/2026)
+
+O perfil `LEITO360_AI` foi criado com sucesso usando a **Opção C**. As
+chamadas de `DBMS_CLOUD_AI.GENERATE` (ações `chat` e `showsql`), porém,
+ficaram pendentes por vários minutos e falharam por timeout em 4 tentativas
+distintas — diagnóstico completo, com os erros exatos observados, em
+[`docs/evidencias/select_ai_perguntas.md`](docs/evidencias/select_ai_perguntas.md).
+Uma query comum (`SELECT 1 FROM dual`) respondeu normalmente no mesmo
+worksheet, o que aponta para indisponibilidade do serviço OCI Generative AI
+nesse sandbox específico, não um erro de configuração do LEITO360. As 5
+perguntas de negócio exigidas pelo Challenge estão prontas em
+`oracle/sql/08_select_ai_perguntas.sql`, aguardando uma execução em ambiente
+com o serviço saudável.
 
 ## Como executar o ETL
 
@@ -210,12 +217,15 @@ antes de abrir o dashboard pela primeira vez.
 
 ## Como publicar
 
-- **Dashboard:** build estático (`pnpm build`) publicado no GitHub Pages a
-  partir da pasta `dist/`. Sem backend, sem credenciais Oracle no bundle.
+- **Dashboard (já publicado):** [gabriellive1817-stack.github.io/Leito_360](https://gabriellive1817-stack.github.io/Leito_360/)
+  — build estático (`pnpm build`, com `base: '/Leito_360/'` em `vite.config.ts`)
+  publicado na branch `gh-pages`. Sem backend, sem credenciais Oracle no bundle.
+  Para republicar após uma alteração: `pnpm build`, depois copie o conteúdo de
+  `dist/` para a branch `gh-pages` e faça push (ou use um workflow de deploy).
 - **Repositório:** [github.com/gabriellive1817-stack/Leito_360](https://github.com/gabriellive1817-stack/Leito_360),
   público.
-- Após publicar, testar em janela anônima: link do GitHub, link da
-  aplicação, links das fontes oficiais, e responsividade (mobile/tablet/desktop).
+- Testado em janela anônima: link do GitHub, link da aplicação, links das
+  fontes oficiais, e responsividade (mobile/desktop).
 
 ## Limitações
 
