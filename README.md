@@ -21,7 +21,7 @@ Federação do Brasil.
 |---|---|
 | Repositório público | [github.com/gabriellive1817-stack/Leito_360](https://github.com/gabriellive1817-stack/Leito_360) |
 | Aplicação publicada | [gabriellive1817-stack.github.io/Leito_360](https://gabriellive1817-stack.github.io/Leito_360/) |
-| Vídeo pitch (YouTube) | _(cole o link do YouTube aqui)_ |
+| Vídeo pitch (YouTube) | [https://www.youtube.com/watch?v=IAoJ_zeWXmQ](https://www.youtube.com/watch?v=IAoJ_zeWXmQ) |
 | Apresentação | `EC_Sprint_2_1TSCOA_EvidenciasConstrucao_LEITO360_GRUPO61.pptx` |
 
 ---

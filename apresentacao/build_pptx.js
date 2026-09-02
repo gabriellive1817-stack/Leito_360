@@ -725,7 +725,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
   }
   s.addText([
     { text: "Link do vídeo (YouTube): ", options: { color: LIGHT, bold: true } },
-    { text: "COLE O LINK AQUI", options: { color: GOLD, bold: true } },
+    { text: "https://www.youtube.com/watch?v=IAoJ_zeWXmQ", options: { color: GOLD, bold: true } },
   ], {
     x: 0.5, y: ry + 0.05, w: 12.3, h: 0.4, fontSize: 13, fontFace: "Calibri", margin: 0,
   });
