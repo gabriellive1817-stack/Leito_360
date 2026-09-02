@@ -464,7 +464,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
     ["Select AI (perfil real, NL2SQL confirmado, provider Cohere)", 100, TEAL, "Implementado"],
     ["Dashboard sem mocks (filtros, mapa, export CSV)", 100, TEAL, "Implementado"],
     ["Publicação (GitHub público + GitHub Pages ao vivo)", 100, TEAL, "Implementado"],
-    ["Vídeo pitch (gravado; edição e publicação com outro integrante)", 70, GOLD, "Em produção"],
+    ["Vídeo pitch (gravado, com demonstração ao vivo do Oracle e do dashboard)", 100, TEAL, "Implementado"],
   ];
   let iy2 = 2.45;
   for (const [label, pct, color, status] of items) {
@@ -693,7 +693,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
   const s = baseSlide();
   sectionTag(s, "7ª ENTREGA");
   title(s, "Vídeo pitch e demonstração hands-on");
-  subtitle(s, "Até 5 minutos — plano de gravação em docs/roteiro_pitch/roteiro.md e o texto falado, dividido por integrante, em texto_pitch.md.");
+  subtitle(s, "Gravado, com demonstração ao vivo do dashboard publicado e do Oracle Database Actions. Plano em docs/roteiro_pitch/roteiro.md e o texto falado, dividido por integrante, em texto_pitch.md.");
 
   const roteiro = [
     ["0:00–0:30", "Desafio", "Dados do SUS fragmentados entre SIH/SUS, CNES e IBGE"],
@@ -711,8 +711,11 @@ function screenshotSlide(s, imagem, destaques, rodape) {
     s.addText(d, { x: 5.5, y: ry, w: 7.1, h: 0.68, fontSize: 10.5, color: LIGHT, valign: "middle", fontFace: "Calibri", margin: 0 });
     ry += 0.75;
   }
-  s.addText("Link do vídeo (YouTube): [preencher após gravação e publicação]", {
-    x: 0.5, y: ry + 0.05, w: 12.3, h: 0.4, fontSize: 12, italic: true, color: GOLD, fontFace: "Calibri", margin: 0,
+  s.addText([
+    { text: "Link do vídeo (YouTube): ", options: { color: LIGHT, bold: true } },
+    { text: "COLE O LINK AQUI", options: { color: GOLD, bold: true } },
+  ], {
+    x: 0.5, y: ry + 0.05, w: 12.3, h: 0.4, fontSize: 13, fontFace: "Calibri", margin: 0,
   });
   footer(s, 17);
 }
@@ -753,7 +756,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
     "Automatizar a carga Oracle via job agendado",
     "Avaliar endpoint ORDS seguro para consulta guiada",
     "Ampliar indicadores (CID, tipo de procedimento)",
-    "Publicar o vídeo pitch (já gravado)",
+    "Transcrever as saídas das perguntas 2 a 5 do Select AI",
   ].map(t => ({ text: "• " + t, options: { breakLine: true, color: LIGHT, fontSize: 11, paraSpaceAfter: 8 } })),
     { x: 8.95, y: 2.75, w: 3.6, h: 3.9, fontFace: "Calibri", margin: 0 });
 

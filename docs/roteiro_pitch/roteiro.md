@@ -76,10 +76,17 @@ dashboard publicado, Database Actions.
 - `ORA-00942` no início dos scripts de recriação: é o `DROP TABLE` de uma
   tabela que ainda não existe. Esperado, pode seguir.
 
-## Depois de gravar
+## Depois de gravar — status
 
-1. Publicar no YouTube como **não listado** (ou público, conforme a
-   orientação da entrega).
-2. Preencher o link no slide 17 da apresentação
-   (`apresentacao/build_pptx.js`, bloco do slide 17) e regerar o PPTX.
-3. Preencher o link também na seção de entregáveis do `README.md`.
+Gravado. Falta apenas publicar no YouTube e distribuir o link nos **dois**
+lugares abaixo:
+
+| Onde | O que procurar |
+|---|---|
+| Slide 17 do PPTX | a linha em dourado `COLE O LINK AQUI` |
+| [`README.md`](../../README.md), seção **Entregáveis** | a linha `_(cole o link do YouTube aqui)_` |
+
+Publicar como **não listado** ou público, conforme a orientação da entrega.
+Se o PPTX for regerado por script depois disso, o link precisa ser reescrito
+em `apresentacao/build_pptx.js` (bloco do slide 17), senão o placeholder
+volta.

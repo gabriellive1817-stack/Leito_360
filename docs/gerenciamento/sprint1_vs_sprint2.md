@@ -13,7 +13,7 @@ que foi efetivamente implementado nesta Sprint 2.
 | Dashboard — Consulta | "Consulta em Linguagem Natural" simulando resposta em 0,8s | "Explorador Analítico" com 4 consultas guiadas, SQL equivalente identificado como não gerado por IA, qualidade/cobertura do pipeline e exportação CSV | Implementado |
 | "Ao vivo" / ocupação em tempo real | Badge "Ao vivo" e % de ocupação fictícios | Removidos; indicador renomeado para "pressão assistencial comparativa" (competência fechada), com a limitação declarada na própria tela | Corrigido |
 | Publicação | Não publicado | Repositório público no GitHub e dashboard no ar via GitHub Pages | Implementado |
-| Vídeo pitch | Não existia | Roteiro de gravação e texto falado prontos em `docs/roteiro_pitch/`; gravação pendente | Planejado |
+| Vídeo pitch | Não existia | Roteiro e texto falado em `docs/roteiro_pitch/`, gravado com demonstração ao vivo do dashboard publicado e do Oracle Database Actions (incluindo o Select AI respondendo) | Implementado |
 
 ## Evidências de cada linha
 
@@ -43,7 +43,6 @@ que foi efetivamente implementado nesta Sprint 2.
 
 ## O que ficou de fora desta sprint
 
-- Publicação do vídeo pitch (gravado; falta editar e subir).
 - Transcrição das saídas das perguntas 2 a 5 do Select AI para
   `docs/evidencias/select_ai_perguntas.md` (foram executadas na gravação, mas
   só a pergunta 1 está transcrita).

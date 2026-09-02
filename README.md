@@ -15,6 +15,15 @@ Federação do Brasil.
 | 568816 | Pedro Henrique Wei Chern | IA e Select AI |
 | 570130 | Vitória Cristina da Silva Coutinho | UX/UI, protótipo e front-end |
 
+## Entregáveis
+
+| Item | Link |
+|---|---|
+| Repositório público | [github.com/gabriellive1817-stack/Leito_360](https://github.com/gabriellive1817-stack/Leito_360) |
+| Aplicação publicada | [gabriellive1817-stack.github.io/Leito_360](https://gabriellive1817-stack.github.io/Leito_360/) |
+| Vídeo pitch (YouTube) | _(cole o link do YouTube aqui)_ |
+| Apresentação | `EC_Sprint_2_1TSCOA_EvidenciasConstrucao_LEITO360_GRUPO61.pptx` |
+
 ---
 
 ## Problema
