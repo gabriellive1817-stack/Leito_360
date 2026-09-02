@@ -219,7 +219,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
 
   const corpo = [
     ["Dados", "Números fixos no código (ocupação, ranking, internações)", "Pipeline real SIH/SUS + CNES + IBGE, 162 registros reconciliados", "Implementado"],
-    ["Oracle", "Citado na UI, sem execução real", "Relacional + JSON nativo + external table + view, executados no Oracle", "Implementado"],
+    ["Oracle", "Citado na UI, sem execução real", "Relacional + JSON nativo + CSV + view, carregados e conferidos no Oracle", "Implementado"],
     ["Select AI", "SQL estático simulando resposta da IA", "Perfil real respondendo (provider Cohere): NL2SQL sobre a view analítica", "Implementado"],
     ["Dashboard", "2 telas mockadas, \"Ao vivo\", ocupação fake", "Filtros reais, mapa com malha oficial do IBGE, export CSV, sem mocks", "Implementado"],
     ["Publicação", "Não publicado", "Repositório público no GitHub + dashboard no ar via GitHub Pages", "Implementado"],
@@ -407,7 +407,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
   const boxes = [
     ["Fontes oficiais", "TabNet SIH/CNES\nIBGE SIDRA + Malhas", TEAL],
     ["ETL Python", "fetch → parse\nvalida → indicadores", GOLD],
-    ["Oracle AI DB", "Relacional + JSON\n+ External Table", "3B82F6"],
+    ["Oracle AI DB", "Relacional + JSON\n+ CSV + view", "3B82F6"],
     ["Select AI", "Perfil LEITO360_AI\nSHOWSQL/RUNSQL", "8B5CF6"],
     ["Dashboard", "React/Vite estático\nGitHub Pages", TEAL],
   ];
@@ -436,7 +436,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
   const layers = [
     ["Origem dos dados", "SIH/SUS, CNES, IBGE (SIDRA + malha das UFs) — HTTP real", TEAL],
     ["Processamento", "Python stdlib — fetch_raw.py + parse_validate_build.py + build_malha_uf.py", TEAL],
-    ["Armazenamento/modelagem", "Oracle: LEITO360_SIH, LEITO360_CNES_JSON, LEITO360_POPULACAO_EXT, VW_LEITO360_ANALITICO", GOLD],
+    ["Armazenamento/modelagem", "Oracle: LEITO360_SIH (relacional), LEITO360_CNES_JSON (JSON nativo), LEITO360_POPULACAO (CSV), VW_LEITO360_ANALITICO", GOLD],
     ["Visualização/consumo", "public/data/leito360.json → dashboard React/Vite estático", TEAL],
   ];
   let ly = 5.75;
@@ -514,13 +514,13 @@ function screenshotSlide(s, imagem, destaques, rodape) {
 {
   const s = baseSlide();
   sectionTag(s, "4ª ENTREGA");
-  title(s, "Oracle AI Database — relacional, JSON e CSV/External Table");
-  subtitle(s, "Os três formatos exigidos pelo Challenge, implementados em objetos separados e integrados por uma view analítica.");
+  title(s, "Oracle AI Database — os três formatos, em objetos separados");
+  subtitle(s, "Relacional, documento JSON nativo e dados vindos de CSV — cada um em seu objeto, integrados por uma view analítica. Abaixo, o que foi de fato executado no Oracle.");
 
   const objs = [
     ["LEITO360_SIH", "Tabela relacional", "internações, permanência média, taxa de mortalidade — PK (competência, UF)"],
-    ["LEITO360_CNES_JSON", "Coleção/documento JSON nativo (23ai)", "leitos SUS cadastrados + metadados da fonte, colunas virtuais para join"],
-    ["LEITO360_POPULACAO_EXT", "External table sobre CSV (Object Storage)", "DBMS_CLOUD.CREATE_EXTERNAL_TABLE, população por UF"],
+    ["LEITO360_CNES_JSON", "Coleção/documento JSON nativo (23ai)", "162 documentos: leitos SUS cadastrados + metadados da fonte. O join usa JSON_VALUE na view — as colunas virtuais deram ORA-01747 no ambiente real e foram retiradas"],
+    ["LEITO360_POPULACAO", "Carregada a partir do CSV do IBGE", "27 UFs, população estimada 2026. O script da external table (DBMS_CLOUD.CREATE_EXTERNAL_TABLE sobre Object Storage) está versionado em 03_external_table_ibge.sql; no sandbox rodamos a variante 03b"],
     ["VW_LEITO360_ANALITICO", "View analítica", "integra as três fontes + indicadores derivados, base do Select AI"],
   ];
   let oy = 2.3;
@@ -531,7 +531,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
     s.addText(desc, { x: 4.2, y: oy, w: 8.4, h: 0.95, fontSize: 11, color: LIGHT, fontFace: "Calibri", margin: 0, valign: "middle" });
     oy += 1.05;
   }
-  s.addText("Fonte de sintaxe: documentação oficial Oracle Autonomous AI Database 23ai (DDL/JSON/external table). O LiveLabs 4222 foi seguido literalmente apenas para o perfil do Select AI (DBMS_CLOUD_AI.CREATE_PROFILE, provider OCI, DBMS_CLOUD_AI.GENERATE) — ele não cobre criação de tabelas customizadas. Decisão documentada em docs/arquitetura/decisao_livelabs_4222.md.", {
+  s.addText("Fonte de sintaxe: documentação oficial Oracle Autonomous AI Database 23ai. O LiveLabs 4222 foi seguido literalmente apenas para o perfil do Select AI — ele não cobre criação de tabelas customizadas (decisão em docs/arquitetura/decisao_livelabs_4222.md). Montar o bucket de Object Storage não cabia na janela do sandbox, que expira; por isso a população entrou por tabela carregada do mesmo CSV, com o script da external table versionado para quem tiver o bucket disponível.", {
     x: 0.5, y: oy + 0.05, w: 12.3, h: 0.7, fontSize: 9.5, italic: true, color: MUTED, fontFace: "Calibri", margin: 0,
   });
   footer(s, 12);
@@ -715,19 +715,20 @@ function screenshotSlide(s, imagem, destaques, rodape) {
     ["4:00–4:30", "Benefícios", "Dados oficiais, pipeline auditável, transparência sobre limitações"],
     ["4:30–5:00", "Conclusão", "Recapitulação do que foi implementado + próximos passos"],
   ];
-  let ry = 2.3;
+  let ry = 2.28;
   for (const [t, h, d] of roteiro) {
-    card(s, 0.5, ry, 12.3, 0.68);
-    s.addText(t, { x: 0.7, y: ry, w: 1.6, h: 0.68, fontSize: 11, bold: true, color: GOLD, valign: "middle", fontFace: "Calibri", margin: 0 });
-    s.addText(h, { x: 2.4, y: ry, w: 3.0, h: 0.68, fontSize: 12, bold: true, color: WHITE, valign: "middle", fontFace: "Calibri", margin: 0 });
-    s.addText(d, { x: 5.5, y: ry, w: 7.1, h: 0.68, fontSize: 10.5, color: LIGHT, valign: "middle", fontFace: "Calibri", margin: 0 });
-    ry += 0.75;
+    card(s, 0.5, ry, 12.3, 0.58);
+    s.addText(t, { x: 0.7, y: ry, w: 1.6, h: 0.58, fontSize: 11, bold: true, color: GOLD, valign: "middle", fontFace: "Calibri", margin: 0 });
+    s.addText(h, { x: 2.4, y: ry, w: 3.0, h: 0.58, fontSize: 12, bold: true, color: WHITE, valign: "middle", fontFace: "Calibri", margin: 0 });
+    s.addText(d, { x: 5.5, y: ry, w: 7.1, h: 0.58, fontSize: 10.5, color: LIGHT, valign: "middle", fontFace: "Calibri", margin: 0 });
+    ry += 0.65;
   }
+  card(s, 0.5, ry + 0.06, 12.3, 0.52, { fill: "12233F" });
   s.addText([
-    { text: "Link do vídeo (YouTube): ", options: { color: LIGHT, bold: true } },
+    { text: "▶  Link do vídeo (YouTube):   ", options: { color: LIGHT, bold: true } },
     { text: "https://www.youtube.com/watch?v=IAoJ_zeWXmQ", options: { color: GOLD, bold: true } },
   ], {
-    x: 0.5, y: ry + 0.05, w: 12.3, h: 0.4, fontSize: 13, fontFace: "Calibri", margin: 0,
+    x: 0.75, y: ry + 0.06, w: 11.8, h: 0.52, fontSize: 13, fontFace: "Calibri", margin: 0, valign: "middle",
   });
   footer(s, 17);
 }
@@ -749,7 +750,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
     "Dashboard sem nenhum mock, publicado e testado no navegador",
     "Pipeline reprodutível com validação automática",
   ].map(t => ({ text: "• " + t, options: { breakLine: true, color: LIGHT, fontSize: 11, paraSpaceAfter: 8 } })),
-    { x: 0.75, y: 2.75, w: 3.45, h: 3.9, fontFace: "Calibri", margin: 0 });
+    { x: 0.75, y: 2.75, w: 3.45, h: 3.9, fontFace: "Calibri", margin: 0, valign: "top" });
 
   card(s, 4.6, 2.15, 3.95, 4.6);
   s.addText("Limitações", { x: 4.85, y: 2.35, w: 3.45, h: 0.35, fontSize: 14, bold: true, color: GOLD, fontFace: "Calibri", margin: 0 });
@@ -760,7 +761,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
     "Mapa usa a malha do IBGE em qualidade mínima (simplificada)",
     "SQL gerado pelo LLM é não determinístico — sempre conferido",
   ].map(t => ({ text: "• " + t, options: { breakLine: true, color: LIGHT, fontSize: 11, paraSpaceAfter: 8 } })),
-    { x: 4.85, y: 2.75, w: 3.45, h: 3.9, fontFace: "Calibri", margin: 0 });
+    { x: 4.85, y: 2.75, w: 3.45, h: 3.9, fontFace: "Calibri", margin: 0, valign: "top" });
 
   card(s, 8.7, 2.15, 4.1, 4.6);
   s.addText("Próximos passos", { x: 8.95, y: 2.35, w: 3.6, h: 0.35, fontSize: 14, bold: true, color: TEAL, fontFace: "Calibri", margin: 0 });
@@ -770,7 +771,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
     "Ampliar indicadores (CID, tipo de procedimento)",
     "Transcrever as saídas das perguntas 2 a 5 do Select AI",
   ].map(t => ({ text: "• " + t, options: { breakLine: true, color: LIGHT, fontSize: 11, paraSpaceAfter: 8 } })),
-    { x: 8.95, y: 2.75, w: 3.6, h: 3.9, fontFace: "Calibri", margin: 0 });
+    { x: 8.95, y: 2.75, w: 3.6, h: 3.9, fontFace: "Calibri", margin: 0, valign: "top" });
 
   footer(s, 18);
 }

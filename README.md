@@ -126,8 +126,20 @@ identificadas como não geradas por IA.
 |---|---|---|
 | `LEITO360_SIH` | Tabela relacional | `oracle/sql/01_ddl_sih.sql` |
 | `LEITO360_CNES_JSON` | Coleção/documento JSON nativo (23ai) | `oracle/sql/02_ddl_cnes_json.sql` |
-| `LEITO360_POPULACAO_EXT` | External table sobre CSV no Object Storage | `oracle/sql/03_external_table_ibge.sql` |
+| `LEITO360_POPULACAO` | Tabela carregada a partir do CSV do IBGE | `oracle/sql/03b_populacao_fallback.sql` |
 | `VW_LEITO360_ANALITICO` | View analítica integrando as três fontes | `oracle/sql/05_view_analitica.sql` |
+
+**O que foi executado x o que está versionado:** o script da external table
+(`03_external_table_ibge.sql`, com `DBMS_CLOUD.CREATE_EXTERNAL_TABLE` sobre
+CSV no Object Storage) está no repositório e é o caminho que o enunciado
+sugere. Porém montar o bucket e a credencial de Object Storage não cabia na
+janela do sandbox do LiveLabs, que expira — então o que rodou de fato foi a
+variante `03b`, uma tabela relacional carregada a partir do **mesmo CSV**.
+Dados e resultado idênticos; muda só o mecanismo de armazenamento. Na mesma
+linha, as **colunas virtuais** originalmente previstas em
+`02_ddl_cnes_json.sql` deram `ORA-01747` no ambiente real e foram retiradas:
+a extração dos campos do JSON passou a ser feita com `JSON_VALUE` dentro da
+view, que é a abordagem mais portável.
 
 **Nota importante sobre fontes de sintaxe SQL:** o workshop oficial
 [LiveLabs 4222](https://livelabs.oracle.com/ords/r/dbpm/livelabs/view-workshop?wid=4222)
