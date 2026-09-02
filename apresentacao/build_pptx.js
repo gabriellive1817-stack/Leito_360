@@ -602,43 +602,55 @@ function screenshotSlide(s, imagem, destaques, rodape) {
 {
   const s = baseSlide();
   sectionTag(s, "5ª ENTREGA");
-  title(s, "Select AI — NL2SQL real sobre os dados do projeto");
-  subtitle(s, "Pergunta em português → SQL gerado pelo modelo → resultado. Transcrito da tela, sem edição.");
+  title(s, "Select AI — NL2SQL real, e conferido contra a fonte");
+  subtitle(s, "Pergunta em português → SQL gerado pelo modelo → resultado. Transcrito da tela, sem edição. Provider Cohere (as opções OCI GenAI falharam em 2 sandboxes, 3 regiões e 2 credenciais — percurso em docs/evidencias/).");
 
-  card(s, 0.5, 2.25, 12.3, 1.85);
-  s.addText("✓ Pergunta 1 — SHOWSQL (2,87 s): SQL gerado pelo modelo", { x: 0.75, y: 2.35, w: 11.8, h: 0.28, fontSize: 11.5, bold: true, color: TEAL, fontFace: "Calibri", margin: 0 });
+  card(s, 0.5, 2.2, 12.3, 1.85);
+  s.addText("Pergunta 1 — SHOWSQL (2,87 s): o SQL que o modelo gerou sozinho", { x: 0.75, y: 2.28, w: 11.8, h: 0.28, fontSize: 11.5, bold: true, color: TEAL, fontFace: "Calibri", margin: 0 });
   s.addText("\"Quais Unidades da Federação tiveram mais internações por 100 mil habitantes em abril de 2026?\"", {
-    x: 0.75, y: 2.63, w: 11.8, h: 0.25, fontSize: 10, italic: true, color: MUTED, fontFace: "Calibri", margin: 0,
+    x: 0.75, y: 2.56, w: 11.8, h: 0.25, fontSize: 10, italic: true, color: MUTED, fontFace: "Calibri", margin: 0,
   });
   s.addText('SELECT vw."ESTADO", vw."SIGLA_UF" FROM "ADMIN"."VW_LEITO360_ANALITICO" vw\nWHERE vw."COMPETENCIA" = \'2026-04\' ORDER BY vw."INTERNACOES_POR_100K_HAB" DESC', {
-    x: 0.75, y: 2.93, w: 11.8, h: 0.5, fontSize: 9.5, color: "7DD3C0", fontFace: "Courier New", margin: 0,
+    x: 0.75, y: 2.86, w: 11.8, h: 0.5, fontSize: 9.5, color: "7DD3C0", fontFace: "Courier New", margin: 0,
   });
-  s.addText("O modelo escolheu sozinho a view analítica, a competência e o indicador corretos. O atributo \"comments\": \"true\" envia os COMMENT ON TABLE/COLUMN dos scripts 01, 02 e 05 como contexto semântico.", {
-    x: 0.75, y: 3.5, w: 11.8, h: 0.5, fontSize: 10, color: LIGHT, fontFace: "Calibri", margin: 0,
-  });
-
-  card(s, 0.5, 4.25, 12.3, 1.0);
-  s.addText("✓ Pergunta 1 — RUNSQL (1,75 s): resultado real", { x: 0.75, y: 4.35, w: 11.8, h: 0.28, fontSize: 11.5, bold: true, color: TEAL, fontFace: "Calibri", margin: 0 });
-  s.addText('[ { "ESTADO":"Rondônia", "SIGLA_UF":"RO", "INTERNACOES_POR_100K_HAB":701.17 }, { "ESTADO":"Acre", "SIGLA_UF":"AC", ... } ]', {
-    x: 0.75, y: 4.65, w: 11.8, h: 0.45, fontSize: 9.5, color: "7DD3C0", fontFace: "Courier New", margin: 0,
+  s.addText("Escolheu a view analítica, a competência e o indicador corretos sem dica no prompt — o atributo \"comments\": \"true\" envia os COMMENT ON TABLE/COLUMN dos scripts 01, 02 e 05 como contexto semântico.", {
+    x: 0.75, y: 3.43, w: 11.8, h: 0.5, fontSize: 10, color: LIGHT, fontFace: "Calibri", margin: 0,
   });
 
-  card(s, 0.5, 5.4, 12.3, 1.35, { fill: "2A2410" });
-  s.addText("Limitações declaradas (não escondidas)", { x: 0.75, y: 5.5, w: 11.8, h: 0.28, fontSize: 11.5, bold: true, color: GOLD, fontFace: "Calibri", margin: 0 });
-  const lim = [
-    "SHOWSQL e RUNSQL são chamadas independentes ao modelo — podem gerar SQL diferente entre si (não determinismo do LLM).",
-    "O RUNSQL devolveu os valores corretos (RO 701,17 confere com o ETL) mas fora da ordem pedida — conferimos sempre contra data/processed/.",
-    "A ação 'chat' não consulta o banco e alucinou sobre o próprio projeto. Só SHOWSQL e RUNSQL usam os dados do LEITO360.",
+  s.addText("Conferimos as 5 respostas contra o pipeline validado (data/processed/) — o resultado honesto:", {
+    x: 0.5, y: 4.2, w: 12.3, h: 0.3, fontSize: 11.5, bold: true, color: WHITE, fontFace: "Calibri", margin: 0,
+  });
+
+  const placar = [
+    [{ text: "Pergunta de negócio", options: { bold: true, fill: { color: INK }, color: WHITE } },
+     { text: "Resposta do Select AI", options: { bold: true, fill: { color: INK }, color: WHITE } },
+     { text: "Conferência", options: { bold: true, fill: { color: INK }, color: WHITE } }],
+    ["1 · Pressão assistencial por UF", "Valores conferem (RO 701,17), mas fora da ordem pedida", "Parcial"],
+    ["2 · Menor oferta de leitos por região", "Respondeu \"Nordeste\", que é a de MAIOR oferta (17,15); a menor é Sudeste (12,53). E o SQL do SHOWSQL retornaria outro resultado ainda — o RUNSQL executou SQL diferente", "Incorreta"],
+    ["3 · Permanência acima da média nacional", "RR, TO, MA, PI, CE, PB — todas no conjunto correto (média ponderada 4,882 dias)", "Correta"],
+    ["4 · Maior aumento de internações mar→abr", "RS +1.187 — exato (só 5 UFs cresceram num mês de queda nacional)", "Correta"],
+    ["5 · Internações x leitos por região", "Norte 108.136/28.346 · Nordeste 311.866/98.381 — batem número a número", "Correta"],
   ];
-  let ly = 5.8;
-  for (const l of lim) {
-    s.addText([{ text: "• ", options: { color: GOLD } }, { text: l, options: { color: LIGHT } }], {
-      x: 0.75, y: ly, w: 11.8, h: 0.3, fontSize: 9.5, fontFace: "Calibri", margin: 0,
-    });
-    ly += 0.31;
-  }
-  s.addText("Provider Cohere. As opções OCI Generative AI foram testadas em 2 sandboxes, 2 tenancies, 3 regiões e 2 credenciais — todas devolveram ORA-20404 com a URL malformada \"…oci.my$cloud_domain…\". Percurso completo em docs/evidencias/select_ai_perguntas.md.", {
-    x: 0.5, y: 6.85, w: 12.3, h: 0.35, fontSize: 9, italic: true, color: MUTED, fontFace: "Calibri", margin: 0,
+  const corConf = { "Correta": TEAL, "Parcial": GOLD, "Incorreta": RED };
+  const linhas = [
+    placar[0],
+    ...placar.slice(1).map((l) => l.map((t, i) => ({
+      text: t,
+      options: { color: i === 2 ? corConf[t] : LIGHT, bold: i === 2, fontSize: 9.5, valign: "middle" },
+    }))),
+  ];
+  s.addTable(linhas, {
+    x: 0.5, y: 4.55, w: 12.3, h: 1.85, fontFace: "Calibri", fontSize: 9.5,
+    border: { type: "solid", color: "1E3A5F", pt: 0.5 }, fill: { color: NAVY2 },
+    colW: [3.4, 7.4, 1.5], autoPage: false,
+  });
+
+  card(s, 0.5, 6.5, 12.3, 0.62, { fill: "2A2410" });
+  s.addText([
+    { text: "Conclusão: ", options: { color: GOLD, bold: true } },
+    { text: "3 de 5 plenamente corretas, 1 com ordenação errada e 1 incorreta. O Select AI é uma ótima ferramenta de exploração, mas não substitui a consulta auditada — por isso o dashboard usa o JSON determinístico do ETL e marca seu SQL como \"não gerado por IA\".", options: { color: LIGHT } },
+  ], {
+    x: 0.75, y: 6.5, w: 11.8, h: 0.62, fontSize: 10, fontFace: "Calibri", margin: 0, valign: "middle",
   });
   footer(s, 15);
 }

@@ -8,7 +8,7 @@ que foi efetivamente implementado nesta Sprint 2.
 | Dados | Números fixos no código (ocupação, ranking, internações) | Pipeline real (SIH/SUS, CNES, IBGE), 162 registros reconciliados com os totais de controle do TabNet | Implementado |
 | Fontes | Citadas como texto ("DATASUS/SIH-SUS", "CNES") sem integração | Consultadas por HTTP real via TabNet e API do IBGE, respostas originais preservadas em `data/raw/` | Implementado |
 | Oracle | Mencionado na UI ("Oracle 23ai") sem execução real | Tabela relacional, JSON nativo, external table e view analítica **carregados e conferidos** no Oracle (LiveLabs sandbox #229599, 31/08–01/09/2026) | Implementado |
-| Select AI | SQL "gerado pelo Select AI" era texto estático no componente `SQLHighlight` | Perfil `LEITO360_AI` real com provider Cohere, respondendo em 1,7–4,1 s; NL2SQL confirmado (o modelo gerou sozinho o SQL correto sobre a view analítica) | Implementado — evidências em `docs/evidencias/select_ai_perguntas.md` |
+| Select AI | SQL "gerado pelo Select AI" era texto estático no componente `SQLHighlight` | Perfil `LEITO360_AI` real com provider Cohere, respondendo em 1,7–4,3 s; NL2SQL confirmado, e as 5 respostas conferidas contra o pipeline (3 corretas, 1 com ordenação errada, 1 incorreta) | Implementado — evidências em `docs/evidencias/select_ai_perguntas.md` |
 | Dashboard — Visão Executiva | 2 telas mockadas, sem filtros funcionais | Filtro por competência e região, mapa com a **malha oficial do IBGE** colorido por tercil, ranking, série de 6 competências; clicar numa UF recorta a tela inteira | Implementado |
 | Dashboard — Consulta | "Consulta em Linguagem Natural" simulando resposta em 0,8s | "Explorador Analítico" com 4 consultas guiadas, SQL equivalente identificado como não gerado por IA, qualidade/cobertura do pipeline e exportação CSV | Implementado |
 | "Ao vivo" / ocupação em tempo real | Badge "Ao vivo" e % de ocupação fictícios | Removidos; indicador renomeado para "pressão assistencial comparativa" (competência fechada), com a limitação declarada na própria tela | Corrigido |
@@ -43,7 +43,7 @@ que foi efetivamente implementado nesta Sprint 2.
 
 ## O que ficou de fora desta sprint
 
-- Transcrição das saídas das perguntas 2 a 5 do Select AI para
-  `docs/evidencias/select_ai_perguntas.md` (foram executadas na gravação, mas
-  só a pergunta 1 está transcrita).
+- Captura do `showsql` das perguntas 2 a 5 (só os resultados foram
+  transcritos), o que permitiria explicar com certeza por que a pergunta 2
+  respondeu errado.
 - Automatização da carga do Oracle por job agendado.

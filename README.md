@@ -181,12 +181,27 @@ Autonomous Database bloqueia a saída de rede e todo `GENERATE` falha com
 liberar o host com `DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE` antes de criar a
 credencial — está no Passo 1 do script `07`.
 
-**Limitações registradas honestamente** (detalhamento em
-[`docs/evidencias/select_ai_perguntas.md`](docs/evidencias/select_ai_perguntas.md)):
-a ação `chat` alucinou ao descrever o próprio projeto (ela não consulta o
-banco — só `showsql` e `runsql` usam os dados); e o retorno do `runsql` veio
-sem respeitar o `ORDER BY`, com os valores corretos mas na ordem errada. Por
-isso a saída do Select AI é sempre conferida contra `data/processed/`.
+**As 5 perguntas foram conferidas contra o pipeline validado** — e o resultado
+honesto é misto:
+
+| Pergunta | Conferência |
+|---|---|
+| 1 · Pressão assistencial por UF | Valores corretos, **ordenação errada** |
+| 2 · Menor oferta de leitos por região | ❌ **Incorreta** — respondeu "Nordeste", que é a região de *maior* oferta (17,15/10 mil hab); a menor é o Sudeste (12,53) |
+| 3 · Permanência acima da média nacional | ✅ Correta na parte visível |
+| 4 · Maior aumento de internações mar→abr | ✅ Correta (RS +1.187, exato) |
+| 5 · Internações x leitos por região | ✅ Correta, número a número |
+
+Ou seja: **3 de 5 plenamente corretas, 1 com ordenação errada, 1 incorreta**.
+O Select AI é uma boa ferramenta de exploração, mas não substitui a consulta
+auditada — é exatamente por isso que o dashboard não usa o Select AI para
+gerar seus números: ele consome o JSON determinístico do ETL e identifica o
+SQL exibido como *não gerado por IA*. Detalhamento completo, com os retornos
+transcritos e a conferência de cada um, em
+[`docs/evidencias/select_ai_perguntas.md`](docs/evidencias/select_ai_perguntas.md).
+
+Outra limitação registrada: a ação `chat` alucinou ao descrever o próprio
+projeto (ela não consulta o banco — só `showsql` e `runsql` usam os dados).
 
 **Por que Cohere e não OCI:** as opções A e C foram testadas em 2 sandboxes,
 2 tenancies, 3 regiões e com 2 credenciais diferentes. Em todas, o serviço
@@ -312,8 +327,9 @@ responder só por aquela UF. "Limpar recorte" volta ao Brasil.
   repositório nem no dashboard.
 - O SQL gerado pelo Select AI é não determinístico: `showsql` e `runsql` são
   chamadas separadas ao modelo e podem produzir SQL diferente entre si. Na
-  execução real, o `runsql` devolveu os valores corretos fora da ordem pedida.
-  Toda saída do Select AI deve ser conferida contra `data/processed/`.
+  conferência das 5 perguntas, 3 vieram corretas, 1 com ordenação errada e 1
+  com o conteúdo invertido. Toda saída do Select AI deve ser conferida contra
+  `data/processed/` antes de virar informação para decisão.
 - A ação `chat` do `DBMS_CLOUD_AI` não consulta o banco — é conversa livre com
   o modelo e pode alucinar (aconteceu: descreveu o LEITO360 como plataforma do
   Ministério da Saúde). Só `showsql` e `runsql` usam os dados do projeto.
