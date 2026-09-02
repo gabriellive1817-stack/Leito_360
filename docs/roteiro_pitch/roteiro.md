@@ -12,6 +12,7 @@ por quanto tempo. O texto falado, já dividido por integrante, está em
 | Aplicação no ar | abrir [gabriellive1817-stack.github.io/Leito_360](https://gabriellive1817-stack.github.io/Leito_360/) em janela anônima |
 | Dados carregados | o dashboard abre em Abr/2026 com 1.218.903 internações |
 | Oracle acessível | Database Actions logado, `SELECT COUNT(*) FROM VW_LEITO360_ANALITICO` devolvendo 162 |
+| Select AI vivo | `DBMS_CLOUD_AI.GENERATE(... action => 'chat')` respondendo em segundos |
 | Apresentação | PPTX aberto na capa, em modo apresentação |
 
 Abas abertas e logadas **antes** de iniciar a gravação: apresentação,
@@ -46,18 +47,34 @@ dashboard publicado, Database Actions.
 
 1. `SELECT COUNT(*) FROM VW_LEITO360_ANALITICO;` → 162.
 2. Mostrar os três objetos separados: `LEITO360_SIH` (relacional),
-   `LEITO360_CNES_JSON` (JSON nativo), `LEITO360_POPULACAO_EXT` (external
-   table) — e a view que integra os três.
+   `LEITO360_CNES_JSON` (JSON nativo), `LEITO360_POPULACAO` — e a view que
+   integra os três.
 3. Rodar a soma de internações por competência e comparar com os totais de
    controle do TabNet (diferença zero nas seis competências).
-4. Abrir `oracle/sql/07_select_ai_profile.sql` e mostrar o perfil
-   `LEITO360_AI` criado, restrito aos objetos do projeto.
-5. **Se o serviço de inferência estiver saudável no dia**: rodar a pergunta 1
-   de `oracle/sql/08_select_ai_perguntas.sql` com `SHOWSQL`, mostrar o SQL
-   gerado, e depois `RUNSQL` com o resultado.
-   **Se não estiver**: declarar o bloqueio como está documentado em
+4. Mostrar o perfil `LEITO360_AI` criado com
+   `oracle/sql/07_select_ai_profile.sql`, restrito aos objetos do projeto,
+   provider Cohere.
+5. Rodar a pergunta 1 de `oracle/sql/08_select_ai_perguntas.sql` com
+   `SHOWSQL` — **ler em voz alta o SQL que o modelo gerou sozinho**: ele
+   escolheu a view analítica, a competência `2026-04` e a coluna
+   `INTERNACOES_POR_100K_HAB` sem nenhuma dica no prompt.
+6. Rodar o `RUNSQL` da mesma pergunta, na versão com `JSON_TABLE`, para o
+   resultado sair como tabela em vez de JSON compactado.
+7. **Declarar as limitações na própria demo** (isso conta a favor, não
+   contra): `showsql` e `runsql` são chamadas independentes ao modelo e podem
+   gerar SQL diferente; o `runsql` devolveu os valores certos fora da ordem
+   pedida; e a ação `chat` chegou a alucinar sobre o próprio projeto porque
+   não consulta o banco. Tudo documentado em
    [`docs/evidencias/select_ai_perguntas.md`](../evidencias/select_ai_perguntas.md)
    — nunca simular uma resposta.
+
+### Se algo falhar durante a gravação
+
+- `ORA-24247` (network ACL): rodar o Passo 1 de `07_select_ai_profile.sql`.
+- `ORA-20401` (authorization failed): a chave do Cohere foi colada com
+  espaço/corte — recriar a credencial copiando pelo botão de cópia do painel.
+- `ORA-00942` no início dos scripts de recriação: é o `DROP TABLE` de uma
+  tabela que ainda não existe. Esperado, pode seguir.
 
 ## Depois de gravar
 

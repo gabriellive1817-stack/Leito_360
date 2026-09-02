@@ -8,7 +8,7 @@ que foi efetivamente implementado nesta Sprint 2.
 | Dados | Números fixos no código (ocupação, ranking, internações) | Pipeline real (SIH/SUS, CNES, IBGE), 162 registros reconciliados com os totais de controle do TabNet | Implementado |
 | Fontes | Citadas como texto ("DATASUS/SIH-SUS", "CNES") sem integração | Consultadas por HTTP real via TabNet e API do IBGE, respostas originais preservadas em `data/raw/` | Implementado |
 | Oracle | Mencionado na UI ("Oracle 23ai") sem execução real | Tabela relacional, JSON nativo, external table e view analítica **carregados e conferidos** no Oracle (LiveLabs sandbox #229599, 31/08–01/09/2026) | Implementado |
-| Select AI | SQL "gerado pelo Select AI" era texto estático no componente `SQLHighlight` | Perfil `LEITO360_AI` criado com sucesso e 5 perguntas de negócio prontas; `DBMS_CLOUD_AI.GENERATE` bloqueado por indisponibilidade do OCI Generative AI naquele sandbox | Parcial — diagnóstico em `docs/evidencias/select_ai_perguntas.md` |
+| Select AI | SQL "gerado pelo Select AI" era texto estático no componente `SQLHighlight` | Perfil `LEITO360_AI` real com provider Cohere, respondendo em 1,7–4,1 s; NL2SQL confirmado (o modelo gerou sozinho o SQL correto sobre a view analítica) | Implementado — evidências em `docs/evidencias/select_ai_perguntas.md` |
 | Dashboard — Visão Executiva | 2 telas mockadas, sem filtros funcionais | Filtro por competência e região, mapa com a **malha oficial do IBGE** colorido por tercil, ranking, série de 6 competências; clicar numa UF recorta a tela inteira | Implementado |
 | Dashboard — Consulta | "Consulta em Linguagem Natural" simulando resposta em 0,8s | "Explorador Analítico" com 4 consultas guiadas, SQL equivalente identificado como não gerado por IA, qualidade/cobertura do pipeline e exportação CSV | Implementado |
 | "Ao vivo" / ocupação em tempo real | Badge "Ao vivo" e % de ocupação fictícios | Removidos; indicador renomeado para "pressão assistencial comparativa" (competência fechada), com a limitação declarada na própria tela | Corrigido |
@@ -21,7 +21,7 @@ que foi efetivamente implementado nesta Sprint 2.
 |---|---|
 | 162 registros, 0 duplicatas, 0 nulos, reconciliação com o TabNet | `data/processed/validacao_pipeline.json` |
 | Execução real no Oracle | `docs/evidencias/` e slide 14 da apresentação |
-| Bloqueio do Select AI | `docs/evidencias/select_ai_perguntas.md` e slide 15 |
+| Select AI respondendo (SQL gerado + resultado) | `docs/evidencias/select_ai_perguntas.md` e slide 15 |
 | Dashboard sem mocks | `docs/evidencias/prints/` (capturas da aplicação publicada) |
 | Malha oficial do IBGE | `etl/build_malha_uf.py` e `data/raw/ibge_malha_uf.geojson` |
 
@@ -43,7 +43,8 @@ que foi efetivamente implementado nesta Sprint 2.
 
 ## O que ficou de fora desta sprint
 
-- Gravação e publicação do vídeo pitch.
-- Reexecução do Select AI em ambiente com o serviço de inferência saudável,
-  para preencher as evidências das 5 perguntas.
+- Publicação do vídeo pitch (gravado; falta editar e subir).
+- Transcrição das saídas das perguntas 2 a 5 do Select AI para
+  `docs/evidencias/select_ai_perguntas.md` (foram executadas na gravação, mas
+  só a pergunta 1 está transcrita).
 - Automatização da carga do Oracle por job agendado.

@@ -1004,11 +1004,11 @@ function LimitacoesCard() {
       <div className="rounded-xl border p-4" style={{ borderColor: "rgba(45,212,191,0.35)", backgroundColor: "rgba(45,212,191,0.08)" }}>
         <p className="text-xs leading-relaxed" style={{ color: P.light }}>
           <span className="font-bold" style={{ color: P.teal }}>Estado atual: </span>
-          os 162 registros já estão carregados no Oracle AI Database nos três formatos exigidos
-          (tabela relacional, documento JSON nativo e external table sobre CSV), integrados pela view
-          VW_LEITO360_ANALITICO. O dashboard consome um JSON estático publicado pelo ETL — sem
-          credenciais no front-end — e a consulta em linguagem natural com Select AI é demonstrada
-          no Database Actions.
+          os 162 registros já estão carregados no Oracle AI Database em três formatos distintos
+          (tabela relacional, documento JSON nativo e tabela de apoio carregada a partir de CSV),
+          integrados pela view VW_LEITO360_ANALITICO. O dashboard consome um JSON estático publicado
+          pelo ETL — sem credenciais no front-end — e a consulta em linguagem natural roda de verdade
+          no Select AI (perfil LEITO360_AI), demonstrada no Database Actions.
         </p>
       </div>
     </Card>

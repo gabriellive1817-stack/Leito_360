@@ -1,0 +1,184 @@
+-- LEITO360 -- Bloco 1/4: LEITO360_SIH (DDL + 162 INSERTs)
+DROP TABLE LEITO360_SIH CASCADE CONSTRAINTS PURGE;
+
+CREATE TABLE LEITO360_SIH (
+    competencia         VARCHAR2(7)     NOT NULL,
+    codigo_uf           VARCHAR2(2)     NOT NULL,
+    sigla_uf            VARCHAR2(2)     NOT NULL,
+    estado               VARCHAR2(60)    NOT NULL,
+    regiao               VARCHAR2(20)    NOT NULL,
+    internacoes          NUMBER(10)      NOT NULL,
+    permanencia_media    NUMBER(6,2)     NOT NULL,
+    taxa_mortalidade     NUMBER(6,2)     NOT NULL,
+    CONSTRAINT pk_leito360_sih PRIMARY KEY (competencia, codigo_uf),
+    CONSTRAINT ck_leito360_sih_regiao CHECK (regiao IN
+        ('Norte','Nordeste','Sudeste','Sul','Centro-Oeste')),
+    CONSTRAINT ck_leito360_sih_internacoes CHECK (internacoes >= 0),
+    CONSTRAINT ck_leito360_sih_permanencia CHECK (permanencia_media >= 0),
+    CONSTRAINT ck_leito360_sih_mortalidade CHECK (taxa_mortalidade >= 0)
+);
+
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '11', 'RO', 'Rondônia', 'Norte', 12159, 4.9, 3.0);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '12', 'AC', 'Acre', 'Norte', 4604, 5.0, 2.98);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '13', 'AM', 'Amazonas', 'Norte', 21821, 4.4, 2.91);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '14', 'RR', 'Roraima', 'Norte', 2740, 6.5, 2.81);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '15', 'PA', 'Pará', 'Norte', 48679, 4.2, 2.66);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '16', 'AP', 'Amapá', 'Norte', 4195, 5.1, 3.03);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '17', 'TO', 'Tocantins', 'Norte', 8338, 5.0, 2.89);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '21', 'MA', 'Maranhão', 'Nordeste', 41621, 4.9, 2.84);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '22', 'PI', 'Piauí', 'Nordeste', 18019, 4.9, 3.4);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '23', 'CE', 'Ceará', 'Nordeste', 49378, 5.8, 3.66);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '24', 'RN', 'Rio Grande do Norte', 'Nordeste', 18060, 4.6, 3.61);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '25', 'PB', 'Paraíba', 'Nordeste', 20384, 5.5, 5.49);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '26', 'PE', 'Pernambuco', 'Nordeste', 55041, 5.0, 3.98);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '27', 'AL', 'Alagoas', 'Nordeste', 14415, 5.9, 4.99);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '28', 'SE', 'Sergipe', 'Nordeste', 10306, 5.5, 5.17);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '29', 'BA', 'Bahia', 'Nordeste', 79921, 4.7, 3.73);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '31', 'MG', 'Minas Gerais', 'Sudeste', 129094, 4.6, 4.19);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '32', 'ES', 'Espírito Santo', 'Sudeste', 25978, 4.7, 3.79);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '33', 'RJ', 'Rio de Janeiro', 'Sudeste', 76618, 5.7, 6.01);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '35', 'SP', 'São Paulo', 'Sudeste', 235133, 5.1, 4.94);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '41', 'PR', 'Paraná', 'Sul', 90412, 4.1, 3.73);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '42', 'SC', 'Santa Catarina', 'Sul', 58436, 4.0, 3.69);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '43', 'RS', 'Rio Grande do Sul', 'Sul', 73453, 5.6, 4.72);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '50', 'MS', 'Mato Grosso do Sul', 'Centro-Oeste', 16509, 4.6, 4.27);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '51', 'MT', 'Mato Grosso', 'Centro-Oeste', 21127, 4.4, 3.23);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '52', 'GO', 'Goiás', 'Centro-Oeste', 37361, 4.5, 3.37);
+INSERT INTO LEITO360_SIH VALUES ('2025-11', '53', 'DF', 'Distrito Federal', 'Centro-Oeste', 19737, 5.8, 2.78);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '11', 'RO', 'Rondônia', 'Norte', 11455, 5.0, 3.03);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '12', 'AC', 'Acre', 'Norte', 4527, 4.6, 2.3);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '13', 'AM', 'Amazonas', 'Norte', 21542, 4.3, 2.79);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '14', 'RR', 'Roraima', 'Norte', 2128, 7.7, 3.24);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '15', 'PA', 'Pará', 'Norte', 48817, 4.2, 2.61);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '16', 'AP', 'Amapá', 'Norte', 4900, 4.5, 2.06);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '17', 'TO', 'Tocantins', 'Norte', 7768, 4.9, 4.04);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '21', 'MA', 'Maranhão', 'Nordeste', 39755, 5.0, 3.15);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '22', 'PI', 'Piauí', 'Nordeste', 18898, 5.2, 3.98);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '23', 'CE', 'Ceará', 'Nordeste', 48118, 5.7, 4.0);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '24', 'RN', 'Rio Grande do Norte', 'Nordeste', 17607, 4.8, 3.63);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '25', 'PB', 'Paraíba', 'Nordeste', 19040, 5.7, 5.19);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '26', 'PE', 'Pernambuco', 'Nordeste', 55619, 5.1, 4.27);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '27', 'AL', 'Alagoas', 'Nordeste', 13881, 6.0, 4.41);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '28', 'SE', 'Sergipe', 'Nordeste', 10340, 5.4, 4.26);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '29', 'BA', 'Bahia', 'Nordeste', 76873, 4.7, 3.73);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '31', 'MG', 'Minas Gerais', 'Sudeste', 127389, 4.7, 4.32);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '32', 'ES', 'Espírito Santo', 'Sudeste', 25554, 4.8, 4.06);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '33', 'RJ', 'Rio de Janeiro', 'Sudeste', 75582, 5.8, 6.06);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '35', 'SP', 'São Paulo', 'Sudeste', 226234, 5.2, 5.13);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '41', 'PR', 'Paraná', 'Sul', 88167, 4.2, 3.86);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '42', 'SC', 'Santa Catarina', 'Sul', 55009, 4.2, 3.87);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '43', 'RS', 'Rio Grande do Sul', 'Sul', 70503, 5.6, 4.88);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '50', 'MS', 'Mato Grosso do Sul', 'Centro-Oeste', 16041, 4.8, 3.86);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '51', 'MT', 'Mato Grosso', 'Centro-Oeste', 20484, 4.4, 2.89);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '52', 'GO', 'Goiás', 'Centro-Oeste', 36327, 4.6, 3.51);
+INSERT INTO LEITO360_SIH VALUES ('2025-12', '53', 'DF', 'Distrito Federal', 'Centro-Oeste', 20313, 5.8, 2.84);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '11', 'RO', 'Rondônia', 'Norte', 11443, 5.2, 3.05);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '12', 'AC', 'Acre', 'Norte', 4774, 4.8, 2.97);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '13', 'AM', 'Amazonas', 'Norte', 21748, 4.4, 3.13);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '14', 'RR', 'Roraima', 'Norte', 2597, 7.4, 2.73);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '15', 'PA', 'Pará', 'Norte', 47344, 4.3, 3.02);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '16', 'AP', 'Amapá', 'Norte', 4938, 4.8, 2.31);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '17', 'TO', 'Tocantins', 'Norte', 8884, 4.7, 4.38);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '21', 'MA', 'Maranhão', 'Nordeste', 40638, 5.0, 2.95);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '22', 'PI', 'Piauí', 'Nordeste', 19531, 4.8, 3.47);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '23', 'CE', 'Ceará', 'Nordeste', 48637, 5.8, 4.24);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '24', 'RN', 'Rio Grande do Norte', 'Nordeste', 17739, 5.1, 4.09);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '25', 'PB', 'Paraíba', 'Nordeste', 20646, 5.6, 5.14);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '26', 'PE', 'Pernambuco', 'Nordeste', 51853, 5.2, 4.44);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '27', 'AL', 'Alagoas', 'Nordeste', 14177, 6.1, 4.97);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '28', 'SE', 'Sergipe', 'Nordeste', 10224, 5.7, 5.27);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '29', 'BA', 'Bahia', 'Nordeste', 77927, 4.7, 3.84);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '31', 'MG', 'Minas Gerais', 'Sudeste', 131186, 4.8, 4.71);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '32', 'ES', 'Espírito Santo', 'Sudeste', 24807, 5.0, 4.08);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '33', 'RJ', 'Rio de Janeiro', 'Sudeste', 72939, 5.8, 6.12);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '35', 'SP', 'São Paulo', 'Sudeste', 233322, 5.2, 5.16);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '41', 'PR', 'Paraná', 'Sul', 92271, 4.1, 3.92);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '42', 'SC', 'Santa Catarina', 'Sul', 56756, 4.1, 3.9);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '43', 'RS', 'Rio Grande do Sul', 'Sul', 69652, 5.7, 5.04);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '50', 'MS', 'Mato Grosso do Sul', 'Centro-Oeste', 17443, 4.7, 4.31);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '51', 'MT', 'Mato Grosso', 'Centro-Oeste', 21238, 4.4, 3.05);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '52', 'GO', 'Goiás', 'Centro-Oeste', 36102, 4.7, 3.51);
+INSERT INTO LEITO360_SIH VALUES ('2026-01', '53', 'DF', 'Distrito Federal', 'Centro-Oeste', 19492, 5.9, 3.07);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '11', 'RO', 'Rondônia', 'Norte', 11312, 4.9, 2.85);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '12', 'AC', 'Acre', 'Norte', 4479, 4.7, 3.24);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '13', 'AM', 'Amazonas', 'Norte', 20400, 4.5, 3.03);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '14', 'RR', 'Roraima', 'Norte', 2961, 7.0, 2.5);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '15', 'PA', 'Pará', 'Norte', 45674, 4.3, 2.9);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '16', 'AP', 'Amapá', 'Norte', 4640, 4.4, 2.5);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '17', 'TO', 'Tocantins', 'Norte', 9024, 4.9, 3.18);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '21', 'MA', 'Maranhão', 'Nordeste', 38144, 5.0, 3.09);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '22', 'PI', 'Piauí', 'Nordeste', 17915, 5.0, 3.56);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '23', 'CE', 'Ceará', 'Nordeste', 46201, 5.7, 4.0);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '24', 'RN', 'Rio Grande do Norte', 'Nordeste', 16589, 5.0, 3.66);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '25', 'PB', 'Paraíba', 'Nordeste', 19393, 5.2, 5.11);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '26', 'PE', 'Pernambuco', 'Nordeste', 51040, 5.1, 4.04);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '27', 'AL', 'Alagoas', 'Nordeste', 13588, 5.6, 4.36);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '28', 'SE', 'Sergipe', 'Nordeste', 10654, 5.4, 4.61);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '29', 'BA', 'Bahia', 'Nordeste', 78346, 4.8, 3.98);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '31', 'MG', 'Minas Gerais', 'Sudeste', 127795, 4.7, 4.29);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '32', 'ES', 'Espírito Santo', 'Sudeste', 25223, 4.8, 3.76);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '33', 'RJ', 'Rio de Janeiro', 'Sudeste', 72018, 6.0, 6.36);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '35', 'SP', 'São Paulo', 'Sudeste', 226428, 5.1, 4.76);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '41', 'PR', 'Paraná', 'Sul', 88527, 4.0, 3.58);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '42', 'SC', 'Santa Catarina', 'Sul', 53796, 4.0, 3.72);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '43', 'RS', 'Rio Grande do Sul', 'Sul', 67798, 5.7, 4.8);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '50', 'MS', 'Mato Grosso do Sul', 'Centro-Oeste', 16691, 4.9, 4.24);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '51', 'MT', 'Mato Grosso', 'Centro-Oeste', 20512, 4.4, 3.01);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '52', 'GO', 'Goiás', 'Centro-Oeste', 36121, 4.4, 3.34);
+INSERT INTO LEITO360_SIH VALUES ('2026-02', '53', 'DF', 'Distrito Federal', 'Centro-Oeste', 18277, 5.8, 2.95);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '11', 'RO', 'Rondônia', 'Norte', 13252, 5.0, 3.33);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '12', 'AC', 'Acre', 'Norte', 5087, 4.8, 3.11);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '13', 'AM', 'Amazonas', 'Norte', 23276, 4.4, 3.3);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '14', 'RR', 'Roraima', 'Norte', 3082, 8.0, 3.24);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '15', 'PA', 'Pará', 'Norte', 50991, 4.3, 2.78);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '16', 'AP', 'Amapá', 'Norte', 5420, 4.9, 2.97);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '17', 'TO', 'Tocantins', 'Norte', 9574, 5.0, 3.8);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '21', 'MA', 'Maranhão', 'Nordeste', 42301, 5.1, 3.34);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '22', 'PI', 'Piauí', 'Nordeste', 18124, 5.0, 3.88);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '23', 'CE', 'Ceará', 'Nordeste', 52606, 5.6, 4.14);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '24', 'RN', 'Rio Grande do Norte', 'Nordeste', 18608, 4.7, 3.94);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '25', 'PB', 'Paraíba', 'Nordeste', 22978, 5.2, 5.26);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '26', 'PE', 'Pernambuco', 'Nordeste', 58126, 5.0, 4.22);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '27', 'AL', 'Alagoas', 'Nordeste', 15220, 5.9, 4.76);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '28', 'SE', 'Sergipe', 'Nordeste', 11258, 5.8, 5.05);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '29', 'BA', 'Bahia', 'Nordeste', 83861, 4.7, 3.7);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '31', 'MG', 'Minas Gerais', 'Sudeste', 139157, 4.6, 4.18);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '32', 'ES', 'Espírito Santo', 'Sudeste', 26226, 4.7, 3.93);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '33', 'RJ', 'Rio de Janeiro', 'Sudeste', 81028, 5.8, 5.92);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '35', 'SP', 'São Paulo', 'Sudeste', 251044, 5.0, 4.64);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '41', 'PR', 'Paraná', 'Sul', 93379, 4.0, 3.39);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '42', 'SC', 'Santa Catarina', 'Sul', 58579, 4.1, 3.54);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '43', 'RS', 'Rio Grande do Sul', 'Sul', 73467, 5.7, 4.54);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '50', 'MS', 'Mato Grosso do Sul', 'Centro-Oeste', 16986, 4.7, 4.08);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '51', 'MT', 'Mato Grosso', 'Centro-Oeste', 22955, 4.2, 3.0);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '52', 'GO', 'Goiás', 'Centro-Oeste', 39076, 4.6, 3.44);
+INSERT INTO LEITO360_SIH VALUES ('2026-03', '53', 'DF', 'Distrito Federal', 'Centro-Oeste', 20349, 5.8, 2.9);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '11', 'RO', 'Rondônia', 'Norte', 12322, 4.7, 2.91);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '12', 'AC', 'Acre', 'Norte', 4951, 4.7, 2.26);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '13', 'AM', 'Amazonas', 'Norte', 23388, 4.2, 2.51);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '14', 'RR', 'Roraima', 'Norte', 3013, 6.0, 2.66);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '15', 'PA', 'Pará', 'Norte', 49732, 4.2, 2.85);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '16', 'AP', 'Amapá', 'Norte', 5563, 4.6, 2.1);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '17', 'TO', 'Tocantins', 'Norte', 9167, 5.2, 2.84);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '21', 'MA', 'Maranhão', 'Nordeste', 39802, 5.2, 3.51);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '22', 'PI', 'Piauí', 'Nordeste', 17554, 5.2, 3.94);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '23', 'CE', 'Ceará', 'Nordeste', 49255, 5.7, 3.89);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '24', 'RN', 'Rio Grande do Norte', 'Nordeste', 18209, 4.8, 3.86);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '25', 'PB', 'Paraíba', 'Nordeste', 21924, 5.1, 5.03);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '26', 'PE', 'Pernambuco', 'Nordeste', 56845, 5.1, 4.29);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '27', 'AL', 'Alagoas', 'Nordeste', 15481, 5.9, 5.67);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '28', 'SE', 'Sergipe', 'Nordeste', 10880, 4.8, 3.71);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '29', 'BA', 'Bahia', 'Nordeste', 81916, 4.6, 3.96);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '31', 'MG', 'Minas Gerais', 'Sudeste', 134164, 4.6, 4.24);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '32', 'ES', 'Espírito Santo', 'Sudeste', 25670, 4.6, 3.63);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '33', 'RJ', 'Rio de Janeiro', 'Sudeste', 77640, 5.9, 6.19);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '35', 'SP', 'São Paulo', 'Sudeste', 246274, 5.0, 4.58);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '41', 'PR', 'Paraná', 'Sul', 84114, 4.1, 3.58);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '42', 'SC', 'Santa Catarina', 'Sul', 58378, 4.0, 3.66);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '43', 'RS', 'Rio Grande do Sul', 'Sul', 74654, 5.6, 4.79);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '50', 'MS', 'Mato Grosso do Sul', 'Centro-Oeste', 17492, 4.8, 4.05);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '51', 'MT', 'Mato Grosso', 'Centro-Oeste', 22749, 4.3, 2.97);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '52', 'GO', 'Goiás', 'Centro-Oeste', 38077, 4.5, 3.58);
+INSERT INTO LEITO360_SIH VALUES ('2026-04', '53', 'DF', 'Distrito Federal', 'Centro-Oeste', 19689, 5.5, 2.85);
+COMMIT;
+SELECT COUNT(*) FROM LEITO360_SIH; -- esperado: 162

@@ -141,25 +141,51 @@ da implementação.
 Perfil `LEITO360_AI`, restrito aos objetos do LEITO360
 (`LEITO360_SIH`, `LEITO360_CNES_JSON`, `LEITO360_POPULACAO`,
 `VW_LEITO360_ANALITICO`). `oracle/sql/07_select_ai_profile.sql` traz três
-opções de provedor — escolha a que funcionar no seu ambiente:
+opções de provedor:
 
-- **Opção A — OCI Generative AI (`OCI$RESOURCE_PRINCIPAL`)**: segue literalmente o LiveLabs 4222. Requer OCI Generative AI habilitado na região da sua tenancy.
-- **Opção B — Cohere**: conforme demonstrado em aula (professor Milton Goya, chave de API gratuita em `dashboard.cohere.com`). Não coberto pelo LiveLabs 4222.
-- **Opção C — credencial nativa `AI_CREDENTIAL`**: a credencial que o próprio LiveLabs 4222 (Task 2 do Lab 1) provisiona automaticamente em ambientes de sandbox — encontre com `SELECT credential_name FROM user_credentials`.
+- **Opção B — Cohere** ✅ **é a que funciona e a que foi usada na demonstração**. Chave de API gratuita em `dashboard.cohere.com`, conforme demonstrado em aula. Não coberto pelo LiveLabs 4222.
+- **Opção A — OCI Generative AI (`OCI$RESOURCE_PRINCIPAL`)**: segue literalmente o LiveLabs 4222. Bloqueada nos sandboxes testados (ver abaixo).
+- **Opção C — credencial nativa `AI_CREDENTIAL`**: provisionada pelo próprio LiveLabs 4222 (Task 2 do Lab 1) em alguns sandboxes. Também bloqueada.
 
-### Status real da execução (LiveLabs sandbox #229599, 31/08–01/09/2026)
+### Status real da execução: **funcionando** (01/09/2026)
 
-O perfil `LEITO360_AI` foi criado com sucesso usando a **Opção C**. As
-chamadas de `DBMS_CLOUD_AI.GENERATE` (ações `chat` e `showsql`), porém,
-ficaram pendentes por vários minutos e falharam por timeout em 4 tentativas
-distintas — diagnóstico completo, com os erros exatos observados, em
-[`docs/evidencias/select_ai_perguntas.md`](docs/evidencias/select_ai_perguntas.md).
-Uma query comum (`SELECT 1 FROM dual`) respondeu normalmente no mesmo
-worksheet, o que aponta para indisponibilidade do serviço OCI Generative AI
-nesse sandbox específico, não um erro de configuração do LEITO360. As 5
-perguntas de negócio exigidas pelo Challenge estão prontas em
-`oracle/sql/08_select_ai_perguntas.sql`, aguardando uma execução em ambiente
-com o serviço saudável.
+O Select AI responde de verdade com o provider **Cohere**, no sandbox
+`MovieStreamWorkshop229748` (tenancy `c4ustudent03`, usuário `ADMIN`), com
+tempos de 1,7 a 4,1 s. A Pergunta 1 gerou, sozinha, este SQL a partir da
+pergunta em português:
+
+```sql
+SELECT vw."ESTADO", vw."SIGLA_UF"
+FROM "ADMIN"."VW_LEITO360_ANALITICO" vw
+WHERE vw."COMPETENCIA" = '2026-04'
+ORDER BY vw."INTERNACOES_POR_100K_HAB" DESC
+```
+
+O modelo escolheu a view analítica, a competência e o indicador corretos sem
+nenhuma dica no prompt — o `"comments": "true"` do perfil envia os
+`COMMENT ON TABLE/COLUMN` dos scripts `01`, `02` e `05` como contexto
+semântico.
+
+**Passo crítico que não está no LiveLabs 4222:** com provedor externo, o
+Autonomous Database bloqueia a saída de rede e todo `GENERATE` falha com
+`ORA-24247: Network access denied by access control list (ACL)`. É preciso
+liberar o host com `DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE` antes de criar a
+credencial — está no Passo 1 do script `07`.
+
+**Limitações registradas honestamente** (detalhamento em
+[`docs/evidencias/select_ai_perguntas.md`](docs/evidencias/select_ai_perguntas.md)):
+a ação `chat` alucinou ao descrever o próprio projeto (ela não consulta o
+banco — só `showsql` e `runsql` usam os dados); e o retorno do `runsql` veio
+sem respeitar o `ORDER BY`, com os valores corretos mas na ordem errada. Por
+isso a saída do Select AI é sempre conferida contra `data/processed/`.
+
+**Por que Cohere e não OCI:** as opções A e C foram testadas em 2 sandboxes,
+2 tenancies, 3 regiões e com 2 credenciais diferentes. Em todas, o serviço
+devolveu `ORA-20404` com uma URL malformada contendo o literal
+`my$cloud_domain` — variável de template não substituída pela infraestrutura
+do sandbox, do lado da Oracle. A troca de provedor manteve toda a arquitetura
+Select AI intacta, o que confirma na prática que o `DBMS_CLOUD_AI` isola bem
+a aplicação do provedor de LLM.
 
 ## Como executar o ETL
 
@@ -202,10 +228,19 @@ campo crítico, ou divergência entre a soma por UF e o total do TabNet).
    `05_view_analitica.sql`.
 3. Rode `06_validacoes.sql` e compare os resultados com
    `data/processed/validacao_pipeline.json`.
-4. Rode `07_select_ai_profile.sql` (ajuste `<SCHEMA_LEITO360>` e a região) e
-   depois `08_select_ai_perguntas.sql`.
+4. Rode `07_select_ai_profile.sql` — **Opção B (Cohere)**, os quatro passos em
+   ordem: liberar a ACL de rede para `api.cohere.ai`, criar a credencial com a
+   sua chave de API, criar o perfil, testar com `chat`. Depois
+   `08_select_ai_perguntas.sql`.
 5. Preencha `docs/evidencias/select_ai_perguntas.md` com os resultados reais
    e guarde as capturas (sem expor usuário/senha) em `docs/evidencias/prints/`.
+
+Atalho para recriar o schema num ambiente novo: `oracle/sql/consolidado_recriacao/`
+tem os quatro blocos (`01_sih.sql`, `02_cnes.sql`, `03_populacao.sql`,
+`04_view.sql`) com o DDL e todos os `INSERT` já gerados a partir de
+`oracle/data/` — cole cada um no SQL Worksheet e rode como **script**. Foram
+gerados pelo ETL, não digitados à mão, e reproduzem exatamente os 162 + 162 +
+27 registros validados.
 
 **Nenhuma credencial, senha, wallet ou string de conexão deve ser commitada
 neste repositório.** Os scripts usam placeholders (`<CREDENTIAL_NAME>`,
@@ -262,9 +297,17 @@ responder só por aquela UF. "Limpar recorte" volta ao Brasil.
 - O mapa usa a malha oficial do IBGE em qualidade mínima, ainda simplificada
   por Douglas-Peucker e projetada em equirretangular: serve para leitura
   comparativa entre UFs, não para medição cartográfica.
-- Select AI depende de acesso a um provedor de LLM (OCI Generative AI,
-  OpenAI, Azure ou Google Gemini) configurado na conta Oracle do usuário;
-  não há chave/credencial embutida no repositório nem no dashboard.
+- Select AI depende de um provedor de LLM configurado na conta Oracle do
+  usuário (aqui: Cohere, com chave de API pessoal) e da liberação de ACL de
+  rede para o host do provedor; não há chave/credencial embutida no
+  repositório nem no dashboard.
+- O SQL gerado pelo Select AI é não determinístico: `showsql` e `runsql` são
+  chamadas separadas ao modelo e podem produzir SQL diferente entre si. Na
+  execução real, o `runsql` devolveu os valores corretos fora da ordem pedida.
+  Toda saída do Select AI deve ser conferida contra `data/processed/`.
+- A ação `chat` do `DBMS_CLOUD_AI` não consulta o banco — é conversa livre com
+  o modelo e pode alucinar (aconteceu: descreveu o LEITO360 como plataforma do
+  Ministério da Saúde). Só `showsql` e `runsql` usam os dados do projeto.
 
 ## Próximos passos
 

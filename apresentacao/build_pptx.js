@@ -220,7 +220,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
   const corpo = [
     ["Dados", "Números fixos no código (ocupação, ranking, internações)", "Pipeline real SIH/SUS + CNES + IBGE, 162 registros reconciliados", "Implementado"],
     ["Oracle", "Citado na UI, sem execução real", "Relacional + JSON nativo + external table + view, executados no Oracle", "Implementado"],
-    ["Select AI", "SQL estático simulando resposta da IA", "Perfil real criado; GENERATE bloqueado pelo OCI GenAI do sandbox", "Parcial*"],
+    ["Select AI", "SQL estático simulando resposta da IA", "Perfil real respondendo (provider Cohere): NL2SQL sobre a view analítica", "Implementado"],
     ["Dashboard", "2 telas mockadas, \"Ao vivo\", ocupação fake", "Filtros reais, mapa com malha oficial do IBGE, export CSV, sem mocks", "Implementado"],
     ["Publicação", "Não publicado", "Repositório público no GitHub + dashboard no ar via GitHub Pages", "Implementado"],
   ];
@@ -245,7 +245,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
     fill: { color: NAVY2 }, autoPage: false,
     colW: [1.9, 4.0, 4.6, 1.8],
   });
-  s.addText("* Oracle e dashboard executados de verdade (evidências nos slides 6, 7, 8 e 14). O Select AI teve o perfil criado com sucesso, mas o serviço OCI Generative AI do sandbox LiveLabs não respondeu — diagnóstico completo no slide 15.", {
+  s.addText("Oracle, Select AI e dashboard executados de verdade (evidências nos slides 6, 7, 8, 14 e 15). O Select AI só funcionou depois de trocar o provider de OCI Generative AI para Cohere — o percurso do diagnóstico está no slide 15.", {
     x: 0.5, y: 6.75, w: 12.3, h: 0.35, fontSize: 9.5, italic: true, color: MUTED, fontFace: "Calibri", margin: 0,
   });
   footer(s, 3);
@@ -461,10 +461,10 @@ function screenshotSlide(s, imagem, destaques, rodape) {
   const items = [
     ["ETL (3 fontes reais, validado, reconciliado)", 100, TEAL, "Implementado"],
     ["Execução Oracle (3 formatos + view, 162 registros confirmados no LiveLabs)", 100, TEAL, "Implementado"],
-    ["Select AI — perfil criado; GENERATE bloqueado por indisponibilidade do OCI GenAI no sandbox", 70, GOLD, "Parcial"],
+    ["Select AI (perfil real, NL2SQL confirmado, provider Cohere)", 100, TEAL, "Implementado"],
     ["Dashboard sem mocks (filtros, mapa, export CSV)", 100, TEAL, "Implementado"],
     ["Publicação (GitHub público + GitHub Pages ao vivo)", 100, TEAL, "Implementado"],
-    ["Vídeo pitch (produção com outro integrante do grupo)", 0, RED, "Planejado"],
+    ["Vídeo pitch (gravado; edição e publicação com outro integrante)", 70, GOLD, "Em produção"],
   ];
   let iy2 = 2.45;
   for (const [label, pct, color, status] of items) {
@@ -560,7 +560,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
     s.addText(perguntas[i], { x: 1.3, y: py, w: 11.3, h: 0.62, fontSize: 12.5, color: LIGHT, fontFace: "Calibri", margin: 0, valign: "middle" });
     py += 0.7;
   }
-  s.addText("Evidências reais (prompt, SQL gerado, resultado, interpretação, limitações) documentadas em docs/evidencias/select_ai_perguntas.md após execução no ambiente Oracle acadêmico.", {
+  s.addText("Executadas de verdade no Database Actions com o perfil LEITO360_AI (provider Cohere). O SQL gerado, o resultado e as limitações observadas estão em docs/evidencias/select_ai_perguntas.md — nada aqui foi escrito à mão e apresentado como saída da IA.", {
     x: 0.5, y: py + 0.05, w: 12.3, h: 0.4, fontSize: 10, italic: true, color: MUTED, fontFace: "Calibri", margin: 0,
   });
   footer(s, 13);
@@ -572,8 +572,8 @@ function screenshotSlide(s, imagem, destaques, rodape) {
 {
   const s = baseSlide();
   sectionTag(s, "5ª ENTREGA");
-  title(s, "Evidências — execução real no Oracle (LiveLabs sandbox #229599)");
-  subtitle(s, "Rodado de verdade em 31/08–01/09/2026, usuário MOVIESTREAM, tenancy C4U04 (India South).");
+  title(s, "Evidências — execução real no Oracle");
+  subtitle(s, "Rodado em dois sandboxes independentes do LiveLabs (#229599 e MovieStreamWorkshop229748), 31/08–01/09/2026. O schema foi recriado do zero no segundo e devolveu exatamente os mesmos números.");
 
   const rows2 = [
     [{ text: "Verificação", options: { bold: true, fill: { color: INK }, color: WHITE } },
@@ -582,14 +582,15 @@ function screenshotSlide(s, imagem, destaques, rodape) {
     ["Documentos JSON válidos (doc IS JSON)", "162 / 162"],
     ["Soma internações por competência (Oracle x controle)", "1.193.539 / 1.162.871 / 1.178.308 / 1.143.546 / 1.256.010 / 1.218.903 — 0 de diferença em todas"],
     ["Soma leitos SUS por competência (Oracle x controle)", "315.733 / 316.529 / 316.339 / 316.227 / 316.454 / 316.235 — 0 de diferença em todas"],
+    ["Ranking abr/2026 no Oracle x ETL local (internações/100 mil hab)", "PR 703,74 · SC 702,27 · RO 701,17 · AP 686,83 · RS 664,58 — idêntico ao data/processed/"],
     ["Documento JSON de exemplo (SP, abr/2026)", '{"competencia":"2026-04","codigo_uf":"35","sigla_uf":"SP","estado":"São Paulo","regiao":"Sudeste","leitos_sus_cadastrados":54722}'],
-  ].map((r, ri) => r.map((t, i) => typeof t === "string" ? { text: t, options: { color: LIGHT, fontSize: ri === 5 ? 9 : 10.5, valign: "middle", fontFace: ri === 5 ? "Courier New" : "Calibri" } } : t));
+  ].map((r, ri) => r.map((t, i) => typeof t === "string" ? { text: t, options: { color: LIGHT, fontSize: ri === 6 ? 9 : 10.5, valign: "middle", fontFace: ri === 6 ? "Courier New" : "Calibri" } } : t));
 
   s.addTable(rows2, {
     x: 0.5, y: 2.3, w: 12.3, h: 4.3, fontFace: "Calibri", fontSize: 10.5, border: { type: "solid", color: "1E3A5F", pt: 0.5 },
     fill: { color: NAVY2 }, colW: [5.5, 6.8],
   });
-  s.addText("Executado por MOVIESTREAM no SQL Worksheet do Database Actions. Ambiente temporário do LiveLabs (expira após a reserva) — usado apenas para gerar estas evidências, não é a infraestrutura definitiva do projeto.", {
+  s.addText("Executado no SQL Worksheet do Database Actions. Ambientes temporários do LiveLabs (expiram após a reserva) — usados para gerar estas evidências, não são a infraestrutura definitiva. Os scripts de oracle/sql/consolidado_recriacao/ recriam o schema inteiro em qualquer instância nova.", {
     x: 0.5, y: 6.75, w: 12.3, h: 0.35, fontSize: 9, italic: true, color: MUTED, fontFace: "Calibri", margin: 0,
   });
   footer(s, 14);
@@ -601,32 +602,43 @@ function screenshotSlide(s, imagem, destaques, rodape) {
 {
   const s = baseSlide();
   sectionTag(s, "5ª ENTREGA");
-  title(s, "Select AI — perfil real criado, execução bloqueada por infraestrutura");
-  subtitle(s, "Diagnóstico técnico completo em docs/evidencias/select_ai_perguntas.md — nada aqui foi inventado ou simulado.");
+  title(s, "Select AI — NL2SQL real sobre os dados do projeto");
+  subtitle(s, "Pergunta em português → SQL gerado pelo modelo → resultado. Transcrito da tela, sem edição.");
 
-  card(s, 0.5, 2.3, 12.3, 1.0);
-  s.addText("✓ Implementado e confirmado", { x: 0.75, y: 2.42, w: 11.8, h: 0.3, fontSize: 12, bold: true, color: TEAL, fontFace: "Calibri", margin: 0 });
-  s.addText("Perfil LEITO360_AI criado com sucesso (credencial nativa AI_CREDENTIAL indicada pela Task 2 do workshop, não OCI$RESOURCE_PRINCIPAL); DROP/CREATE_PROFILE respondem em ~1-2s; as 5 perguntas de negócio estão prontas em oracle/sql/08_select_ai_perguntas.sql.", {
-    x: 0.75, y: 2.7, w: 11.8, h: 0.55, fontSize: 10, color: LIGHT, fontFace: "Calibri", margin: 0,
+  card(s, 0.5, 2.25, 12.3, 1.85);
+  s.addText("✓ Pergunta 1 — SHOWSQL (2,87 s): SQL gerado pelo modelo", { x: 0.75, y: 2.35, w: 11.8, h: 0.28, fontSize: 11.5, bold: true, color: TEAL, fontFace: "Calibri", margin: 0 });
+  s.addText("\"Quais Unidades da Federação tiveram mais internações por 100 mil habitantes em abril de 2026?\"", {
+    x: 0.75, y: 2.63, w: 11.8, h: 0.25, fontSize: 10, italic: true, color: MUTED, fontFace: "Calibri", margin: 0,
+  });
+  s.addText('SELECT vw."ESTADO", vw."SIGLA_UF" FROM "ADMIN"."VW_LEITO360_ANALITICO" vw\nWHERE vw."COMPETENCIA" = \'2026-04\' ORDER BY vw."INTERNACOES_POR_100K_HAB" DESC', {
+    x: 0.75, y: 2.93, w: 11.8, h: 0.5, fontSize: 9.5, color: "7DD3C0", fontFace: "Courier New", margin: 0,
+  });
+  s.addText("O modelo escolheu sozinho a view analítica, a competência e o indicador corretos. O atributo \"comments\": \"true\" envia os COMMENT ON TABLE/COLUMN dos scripts 01, 02 e 05 como contexto semântico.", {
+    x: 0.75, y: 3.5, w: 11.8, h: 0.5, fontSize: 10, color: LIGHT, fontFace: "Calibri", margin: 0,
   });
 
-  card(s, 0.5, 3.45, 12.3, 2.5, { fill: "2A1810" });
-  s.addText("✗ Bloqueado nesta execução", { x: 0.75, y: 3.58, w: 11.8, h: 0.3, fontSize: 12, bold: true, color: RED, fontFace: "Calibri", margin: 0 });
-  const diag = [
-    "Toda chamada a DBMS_CLOUD_AI.GENERATE (chat, showsql) ficou pendente 3-10 min e falhou — testado 4x, em 2 worksheets, com prompts diferentes.",
-    "1ª tentativa (credencial OCI$RESOURCE_PRINCIPAL): erro imediato ORA-20404 com URL contendo \"my$cloud_domain\" não substituído — bug de configuração do sandbox, não do LEITO360.",
-    "2ª tentativa (credencial correta AI_CREDENTIAL, indicada pelo próprio workshop): sem erro imediato, mas timeout após vários minutos, sem corpo de erro recuperável.",
-    "Uma consulta SQL comum (SELECT 1 FROM dual) no mesmo worksheet respondeu em milissegundos — confirma que o banco está saudável; o problema é isolado ao serviço de inferência do OCI Generative AI.",
+  card(s, 0.5, 4.25, 12.3, 1.0);
+  s.addText("✓ Pergunta 1 — RUNSQL (1,75 s): resultado real", { x: 0.75, y: 4.35, w: 11.8, h: 0.28, fontSize: 11.5, bold: true, color: TEAL, fontFace: "Calibri", margin: 0 });
+  s.addText('[ { "ESTADO":"Rondônia", "SIGLA_UF":"RO", "INTERNACOES_POR_100K_HAB":701.17 }, { "ESTADO":"Acre", "SIGLA_UF":"AC", ... } ]', {
+    x: 0.75, y: 4.65, w: 11.8, h: 0.45, fontSize: 9.5, color: "7DD3C0", fontFace: "Courier New", margin: 0,
+  });
+
+  card(s, 0.5, 5.4, 12.3, 1.35, { fill: "2A2410" });
+  s.addText("Limitações declaradas (não escondidas)", { x: 0.75, y: 5.5, w: 11.8, h: 0.28, fontSize: 11.5, bold: true, color: GOLD, fontFace: "Calibri", margin: 0 });
+  const lim = [
+    "SHOWSQL e RUNSQL são chamadas independentes ao modelo — podem gerar SQL diferente entre si (não determinismo do LLM).",
+    "O RUNSQL devolveu os valores corretos (RO 701,17 confere com o ETL) mas fora da ordem pedida — conferimos sempre contra data/processed/.",
+    "A ação 'chat' não consulta o banco e alucinou sobre o próprio projeto. Só SHOWSQL e RUNSQL usam os dados do LEITO360.",
   ];
-  let dy = 3.95;
-  for (const d of diag) {
-    s.addText([{ text: "• ", options: { color: RED } }, { text: d, options: { color: LIGHT } }], {
-      x: 0.75, y: dy, w: 11.8, h: 0.5, fontSize: 10, fontFace: "Calibri", margin: 0,
+  let ly = 5.8;
+  for (const l of lim) {
+    s.addText([{ text: "• ", options: { color: GOLD } }, { text: l, options: { color: LIGHT } }], {
+      x: 0.75, y: ly, w: 11.8, h: 0.3, fontSize: 9.5, fontFace: "Calibri", margin: 0,
     });
-    dy += 0.48;
+    ly += 0.31;
   }
-  s.addText("Próximo passo: reexecutar em um ambiente com OCI Generative AI confirmadamente saudável (tenancy própria ou nova reserva de sandbox) e preencher as evidências reais das 5 perguntas.", {
-    x: 0.5, y: 6.1, w: 12.3, h: 0.4, fontSize: 10, italic: true, color: MUTED, fontFace: "Calibri", margin: 0,
+  s.addText("Provider Cohere. As opções OCI Generative AI foram testadas em 2 sandboxes, 2 tenancies, 3 regiões e 2 credenciais — todas devolveram ORA-20404 com a URL malformada \"…oci.my$cloud_domain…\". Percurso completo em docs/evidencias/select_ai_perguntas.md.", {
+    x: 0.5, y: 6.85, w: 12.3, h: 0.35, fontSize: 9, italic: true, color: MUTED, fontFace: "Calibri", margin: 0,
   });
   footer(s, 15);
 }
@@ -718,7 +730,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
   s.addText([
     "162 registros reais, reconciliados exatamente com o TabNet",
     "3 formatos Oracle implementados (scripts prontos)",
-    "Select AI seguindo literalmente o LiveLabs 4222",
+    "Select AI respondendo: NL2SQL real sobre a view analítica",
     "Dashboard sem nenhum mock, publicado e testado no navegador",
     "Pipeline reprodutível com validação automática",
   ].map(t => ({ text: "• " + t, options: { breakLine: true, color: LIGHT, fontSize: 11, paraSpaceAfter: 8 } })),
@@ -731,7 +743,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
     "Dados de competências fechadas, não monitoramento ao vivo",
     "Sem alertas automáticos",
     "Mapa usa a malha do IBGE em qualidade mínima (simplificada)",
-    "Select AI depende de provedor de LLM configurado pelo usuário",
+    "SQL gerado pelo LLM é não determinístico — sempre conferido",
   ].map(t => ({ text: "• " + t, options: { breakLine: true, color: LIGHT, fontSize: 11, paraSpaceAfter: 8 } })),
     { x: 4.85, y: 2.75, w: 3.45, h: 3.9, fontFace: "Calibri", margin: 0 });
 
@@ -741,7 +753,7 @@ function screenshotSlide(s, imagem, destaques, rodape) {
     "Automatizar a carga Oracle via job agendado",
     "Avaliar endpoint ORDS seguro para consulta guiada",
     "Ampliar indicadores (CID, tipo de procedimento)",
-    "Gravar e publicar o vídeo pitch",
+    "Publicar o vídeo pitch (já gravado)",
   ].map(t => ({ text: "• " + t, options: { breakLine: true, color: LIGHT, fontSize: 11, paraSpaceAfter: 8 } })),
     { x: 8.95, y: 2.75, w: 3.6, h: 3.9, fontFace: "Calibri", margin: 0 });
 
