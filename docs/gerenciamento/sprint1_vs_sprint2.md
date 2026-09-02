@@ -3,6 +3,13 @@
 Comparativo entre o que a Sprint 1 propôs (protótipo Figma + apresentação) e o
 que foi efetivamente implementado nesta Sprint 2.
 
+> **Nota sobre a identificação do grupo:** a Sprint 1 foi entregue como
+> **GRUPO 77**. O grupo foi renumerado depois disso e passou a ser o
+> **GRUPO 61**, identificação usada nesta Sprint 2 e na planilha
+> `Informacoes_Finais_Projeto_Integrantes_v1.xlsx`. Mesmo grupo, mesmos cinco
+> integrantes. Os arquivos da Sprint 1 mantêm o nome original da entrega para
+> não alterar o material tal como foi submetido na época.
+
 | Item | Sprint 1 (protótipo) | Sprint 2 (este repositório) | Status |
 |---|---|---|---|
 | Dados | Números fixos no código (ocupação, ranking, internações) | Pipeline real (SIH/SUS, CNES, IBGE), 162 registros reconciliados com os totais de controle do TabNet | Implementado |
