@@ -30,3 +30,6 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+
+# Pacote de entrega (gerado por git archive, não versionar)
+1TSCOA_Sprint_2_Entrega_Final_*.zip
